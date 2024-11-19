@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c DIO_Interface.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c DIO_Interface.c mLEDs.c mButtons.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/DIO_Interface.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/DIO_Interface.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/DIO_Interface.o ${OBJECTDIR}/mLEDs.o ${OBJECTDIR}/mButtons.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/DIO_Interface.o.d ${OBJECTDIR}/mLEDs.o.d ${OBJECTDIR}/mButtons.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/DIO_Interface.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/DIO_Interface.o ${OBJECTDIR}/mLEDs.o ${OBJECTDIR}/mButtons.o
 
 # Source Files
-SOURCEFILES=main.c DIO_Interface.c
+SOURCEFILES=main.c DIO_Interface.c mLEDs.c mButtons.c
 
 
 
@@ -106,6 +106,18 @@ ${OBJECTDIR}/DIO_Interface.o: DIO_Interface.c  .generated_files/flags/default/78
 	@${RM} ${OBJECTDIR}/DIO_Interface.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/DIO_Interface.o.d" -MT "${OBJECTDIR}/DIO_Interface.o.d" -MT ${OBJECTDIR}/DIO_Interface.o -o ${OBJECTDIR}/DIO_Interface.o DIO_Interface.c 
 	
+${OBJECTDIR}/mLEDs.o: mLEDs.c  .generated_files/flags/default/37bbe5a7868317765068a2741024d6775634272a .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/mLEDs.o.d 
+	@${RM} ${OBJECTDIR}/mLEDs.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mLEDs.o.d" -MT "${OBJECTDIR}/mLEDs.o.d" -MT ${OBJECTDIR}/mLEDs.o -o ${OBJECTDIR}/mLEDs.o mLEDs.c 
+	
+${OBJECTDIR}/mButtons.o: mButtons.c  .generated_files/flags/default/cfcd03cbba6f6d7ab2df72f52c12b627b3dc714e .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/mButtons.o.d 
+	@${RM} ${OBJECTDIR}/mButtons.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mButtons.o.d" -MT "${OBJECTDIR}/mButtons.o.d" -MT ${OBJECTDIR}/mButtons.o -o ${OBJECTDIR}/mButtons.o mButtons.c 
+	
 else
 ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/f4c3057782fdd21250cbaa859cfefcd926f205b6 .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
 	@${MKDIR} "${OBJECTDIR}" 
@@ -118,6 +130,18 @@ ${OBJECTDIR}/DIO_Interface.o: DIO_Interface.c  .generated_files/flags/default/d1
 	@${RM} ${OBJECTDIR}/DIO_Interface.o.d 
 	@${RM} ${OBJECTDIR}/DIO_Interface.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/DIO_Interface.o.d" -MT "${OBJECTDIR}/DIO_Interface.o.d" -MT ${OBJECTDIR}/DIO_Interface.o -o ${OBJECTDIR}/DIO_Interface.o DIO_Interface.c 
+	
+${OBJECTDIR}/mLEDs.o: mLEDs.c  .generated_files/flags/default/7525e62d80a624210781929234aade1e278e0d24 .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/mLEDs.o.d 
+	@${RM} ${OBJECTDIR}/mLEDs.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mLEDs.o.d" -MT "${OBJECTDIR}/mLEDs.o.d" -MT ${OBJECTDIR}/mLEDs.o -o ${OBJECTDIR}/mLEDs.o mLEDs.c 
+	
+${OBJECTDIR}/mButtons.o: mButtons.c  .generated_files/flags/default/26fcc5fef087bbb42c02a9ef1936226010ce6a09 .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/mButtons.o.d 
+	@${RM} ${OBJECTDIR}/mButtons.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mButtons.o.d" -MT "${OBJECTDIR}/mButtons.o.d" -MT ${OBJECTDIR}/mButtons.o -o ${OBJECTDIR}/mButtons.o mButtons.c 
 	
 endif
 
