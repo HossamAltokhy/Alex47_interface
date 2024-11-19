@@ -12,24 +12,34 @@
 #include "DIO_Interface.h"
 #include "mLEDs.h"
 #include "mButtons.h"
+#include "mBuzzer.h"
+#include "mRelay.h"
+#include "m7Segment.h"
 
 int main(void) {
     /* Replace with your application code */
 
 
+    init_7Seg();
     init_BTNS();
-    init_LEDs();
+    int num = 99;
 
-
+    int counter = 0;
     while (1) {
+//        if (BTNs_isPressed(BTN0)) {
+//            num++;
+//            _delay_ms(200);
+//        }
 
-        if (BTNs_isPressed(BTN0)) {
-            LED_ON(LED2);
-        } else {
-            LED_OFF(LED2);
+        counter++;
+        
+        if(counter == 100){
+            num--;
+            counter = 0;
         }
-
-
+        
+        _7Seg_write_num(num);
+        
 
     }
 }

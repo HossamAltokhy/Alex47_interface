@@ -7,6 +7,9 @@
       <itemPath>DIO_Interface.h</itemPath>
       <itemPath>mLEDs.h</itemPath>
       <itemPath>mButtons.h</itemPath>
+      <itemPath>mRelay.h</itemPath>
+      <itemPath>mBuzzer.h</itemPath>
+      <itemPath>m7Segment.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -19,6 +22,9 @@
       <itemPath>DIO_Interface.c</itemPath>
       <itemPath>mLEDs.c</itemPath>
       <itemPath>mButtons.c</itemPath>
+      <itemPath>mRelay.c</itemPath>
+      <itemPath>mBuzzer.c</itemPath>
+      <itemPath>m7Segment.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -26,6 +32,9 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">

@@ -19,17 +19,79 @@ Discarded input sections
                 0x0000000000000000        0x6 build/default/production/DIO_Interface.o
  .text.DIO_Read_PORT
                 0x0000000000000000        0xc build/default/production/DIO_Interface.o
+ .text.DIO_Read_PIN
+                0x0000000000000000       0x3e build/default/production/DIO_Interface.o
  .text.DIO_Toggle_PIN
                 0x0000000000000000       0x18 build/default/production/DIO_Interface.o
  .text          0x0000000000000000        0x0 build/default/production/mLEDs.o
  .data          0x0000000000000000        0x0 build/default/production/mLEDs.o
  .bss           0x0000000000000000        0x0 build/default/production/mLEDs.o
+ .text.init_LEDs
+                0x0000000000000000       0x26 build/default/production/mLEDs.o
  .text.LEDs_ON  0x0000000000000000       0x26 build/default/production/mLEDs.o
  .text.LEDs_OFF
                 0x0000000000000000       0x26 build/default/production/mLEDs.o
+ .text.LED_ON   0x0000000000000000       0x36 build/default/production/mLEDs.o
+ .text.LED_OFF  0x0000000000000000       0x36 build/default/production/mLEDs.o
+ .debug_info    0x0000000000000000      0x4d8 build/default/production/mLEDs.o
+ .debug_abbrev  0x0000000000000000       0xa5 build/default/production/mLEDs.o
+ .debug_loc     0x0000000000000000       0xa6 build/default/production/mLEDs.o
+ .debug_aranges
+                0x0000000000000000       0x40 build/default/production/mLEDs.o
+ .debug_ranges  0x0000000000000000       0x30 build/default/production/mLEDs.o
+ .debug_line    0x0000000000000000      0x145 build/default/production/mLEDs.o
+ .debug_str     0x0000000000000000       0x22 build/default/production/mLEDs.o
+ .comment       0x0000000000000000       0x30 build/default/production/mLEDs.o
+ .debug_frame   0x0000000000000000       0x64 build/default/production/mLEDs.o
  .text          0x0000000000000000        0x0 build/default/production/mButtons.o
  .data          0x0000000000000000        0x0 build/default/production/mButtons.o
  .bss           0x0000000000000000        0x0 build/default/production/mButtons.o
+ .text.BTNs_isPressed
+                0x0000000000000000       0x56 build/default/production/mButtons.o
+ .text          0x0000000000000000        0x0 build/default/production/mRelay.o
+ .data          0x0000000000000000        0x0 build/default/production/mRelay.o
+ .bss           0x0000000000000000        0x0 build/default/production/mRelay.o
+ .text.init_Relay
+                0x0000000000000000        0xe build/default/production/mRelay.o
+ .text.Relay_ON
+                0x0000000000000000        0xe build/default/production/mRelay.o
+ .text.Relay_OFF
+                0x0000000000000000        0xe build/default/production/mRelay.o
+ .debug_info    0x0000000000000000      0x2e1 build/default/production/mRelay.o
+ .debug_abbrev  0x0000000000000000       0x6f build/default/production/mRelay.o
+ .debug_aranges
+                0x0000000000000000       0x30 build/default/production/mRelay.o
+ .debug_ranges  0x0000000000000000       0x20 build/default/production/mRelay.o
+ .debug_line    0x0000000000000000       0xba build/default/production/mRelay.o
+ .debug_str     0x0000000000000000       0x22 build/default/production/mRelay.o
+ .comment       0x0000000000000000       0x30 build/default/production/mRelay.o
+ .debug_frame   0x0000000000000000       0x44 build/default/production/mRelay.o
+ .text          0x0000000000000000        0x0 build/default/production/mBuzzer.o
+ .data          0x0000000000000000        0x0 build/default/production/mBuzzer.o
+ .bss           0x0000000000000000        0x0 build/default/production/mBuzzer.o
+ .text.init_Buzzer
+                0x0000000000000000        0xe build/default/production/mBuzzer.o
+ .text.Buzzer_ON
+                0x0000000000000000        0xe build/default/production/mBuzzer.o
+ .text.Buzzer_OFF
+                0x0000000000000000        0xe build/default/production/mBuzzer.o
+ .text.Buzzer_Play
+                0x0000000000000000       0x86 build/default/production/mBuzzer.o
+ .text.Buzzer_PlayTone
+                0x0000000000000000       0x6c build/default/production/mBuzzer.o
+ .debug_info    0x0000000000000000      0x5f8 build/default/production/mBuzzer.o
+ .debug_abbrev  0x0000000000000000      0x10b build/default/production/mBuzzer.o
+ .debug_loc     0x0000000000000000      0x2a8 build/default/production/mBuzzer.o
+ .debug_aranges
+                0x0000000000000000       0x40 build/default/production/mBuzzer.o
+ .debug_ranges  0x0000000000000000       0x30 build/default/production/mBuzzer.o
+ .debug_line    0x0000000000000000      0x1e1 build/default/production/mBuzzer.o
+ .debug_str     0x0000000000000000       0x22 build/default/production/mBuzzer.o
+ .comment       0x0000000000000000       0x30 build/default/production/mBuzzer.o
+ .debug_frame   0x0000000000000000       0x78 build/default/production/mBuzzer.o
+ .text          0x0000000000000000        0x0 build/default/production/m7Segment.o
+ .data          0x0000000000000000        0x0 build/default/production/m7Segment.o
+ .bss           0x0000000000000000        0x0 build/default/production/m7Segment.o
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
@@ -69,6 +131,9 @@ LOAD build/default/production/main.o
 LOAD build/default/production/DIO_Interface.o
 LOAD build/default/production/mLEDs.o
 LOAD build/default/production/mButtons.o
+LOAD build/default/production/mRelay.o
+LOAD build/default/production/mBuzzer.o
+LOAD build/default/production/m7Segment.o
 START GROUP
 LOAD c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a
 END GROUP
@@ -322,8 +387,8 @@ END GROUP
  .comment       0x0000000000000000       0x2f build/default/production/main.o
                                          0x30 (size before relaxing)
  .comment       0x000000000000002f       0x30 build/default/production/DIO_Interface.o
- .comment       0x000000000000002f       0x30 build/default/production/mLEDs.o
  .comment       0x000000000000002f       0x30 build/default/production/mButtons.o
+ .comment       0x000000000000002f       0x30 build/default/production/m7Segment.o
 
 .stack.descriptors.hdr
                 0x0000000000000000        0xe
@@ -345,64 +410,65 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000       0xd8
+.debug_aranges  0x0000000000000000       0xe0
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0x20 build/default/production/main.o
  .debug_aranges
                 0x0000000000000020       0x50 build/default/production/DIO_Interface.o
  .debug_aranges
-                0x0000000000000070       0x40 build/default/production/mLEDs.o
+                0x0000000000000070       0x28 build/default/production/mButtons.o
  .debug_aranges
-                0x00000000000000b0       0x28 build/default/production/mButtons.o
+                0x0000000000000098       0x48 build/default/production/m7Segment.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x1410
+.debug_info     0x0000000000000000     0x159e
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x4e6 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
- .debug_info    0x00000000000004e6      0x2b4 build/default/production/main.o
- .debug_info    0x000000000000079a      0x426 build/default/production/DIO_Interface.o
- .debug_info    0x0000000000000bc0      0x4d8 build/default/production/mLEDs.o
- .debug_info    0x0000000000001098      0x378 build/default/production/mButtons.o
+ .debug_info    0x00000000000004e6      0x289 build/default/production/main.o
+ .debug_info    0x000000000000076f      0x426 build/default/production/DIO_Interface.o
+ .debug_info    0x0000000000000b95      0x378 build/default/production/mButtons.o
+ .debug_info    0x0000000000000f0d      0x691 build/default/production/m7Segment.o
 
-.debug_abbrev   0x0000000000000000      0x730
+.debug_abbrev   0x0000000000000000      0x788
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x4a3 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
- .debug_abbrev  0x00000000000004a3       0x93 build/default/production/main.o
- .debug_abbrev  0x0000000000000536       0x9f build/default/production/DIO_Interface.o
- .debug_abbrev  0x00000000000005d5       0xa5 build/default/production/mLEDs.o
- .debug_abbrev  0x000000000000067a       0xb6 build/default/production/mButtons.o
+ .debug_abbrev  0x00000000000004a3       0x83 build/default/production/main.o
+ .debug_abbrev  0x0000000000000526       0x9f build/default/production/DIO_Interface.o
+ .debug_abbrev  0x00000000000005c5       0xb6 build/default/production/mButtons.o
+ .debug_abbrev  0x000000000000067b      0x10d build/default/production/m7Segment.o
 
-.debug_line     0x0000000000000000      0x49f
+.debug_line     0x0000000000000000      0x56e
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x119 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
- .debug_line    0x0000000000000119       0x6b build/default/production/main.o
- .debug_line    0x0000000000000184       0xfa build/default/production/DIO_Interface.o
- .debug_line    0x000000000000027e      0x145 build/default/production/mLEDs.o
- .debug_line    0x00000000000003c3       0xdc build/default/production/mButtons.o
+ .debug_line    0x0000000000000119       0x87 build/default/production/main.o
+ .debug_line    0x00000000000001a0       0xfa build/default/production/DIO_Interface.o
+ .debug_line    0x000000000000029a       0xdc build/default/production/mButtons.o
+ .debug_line    0x0000000000000376      0x1f8 build/default/production/m7Segment.o
 
-.debug_frame    0x0000000000000000      0x150
+.debug_frame    0x0000000000000000      0x178
  *(.debug_frame)
  .debug_frame   0x0000000000000000       0x24 build/default/production/main.o
  .debug_frame   0x0000000000000024       0x84 build/default/production/DIO_Interface.o
- .debug_frame   0x00000000000000a8       0x64 build/default/production/mLEDs.o
- .debug_frame   0x000000000000010c       0x44 build/default/production/mButtons.o
+ .debug_frame   0x00000000000000a8       0x44 build/default/production/mButtons.o
+ .debug_frame   0x00000000000000ec       0x8c build/default/production/m7Segment.o
 
-.debug_str      0x0000000000000000      0x1fe
+.debug_str      0x0000000000000000      0x1ff
  *(.debug_str)
  .debug_str     0x0000000000000000      0x196 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
- .debug_str     0x0000000000000196       0x23 build/default/production/main.o
- .debug_str     0x00000000000001b9        0x6 build/default/production/DIO_Interface.o
- .debug_str     0x00000000000001bf       0x22 build/default/production/mLEDs.o
- .debug_str     0x00000000000001e1       0x1d build/default/production/mButtons.o
+ .debug_str     0x0000000000000196       0x24 build/default/production/main.o
+ .debug_str     0x00000000000001ba        0x6 build/default/production/DIO_Interface.o
+ .debug_str     0x00000000000001c0       0x1d build/default/production/mButtons.o
+ .debug_str     0x00000000000001dd       0x22 build/default/production/m7Segment.o
 
-.debug_loc      0x0000000000000000      0x22f
+.debug_loc      0x0000000000000000      0x3f7
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x136 build/default/production/DIO_Interface.o
- .debug_loc     0x0000000000000136       0xa6 build/default/production/mLEDs.o
- .debug_loc     0x00000000000001dc       0x53 build/default/production/mButtons.o
+ .debug_loc     0x0000000000000000       0x65 build/default/production/main.o
+ .debug_loc     0x0000000000000065      0x136 build/default/production/DIO_Interface.o
+ .debug_loc     0x000000000000019b       0x53 build/default/production/mButtons.o
+ .debug_loc     0x00000000000001ee      0x209 build/default/production/m7Segment.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -422,12 +488,12 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000       0x98
+.debug_ranges   0x0000000000000000       0xa0
  *(.debug_ranges)
  .debug_ranges  0x0000000000000000       0x10 build/default/production/main.o
  .debug_ranges  0x0000000000000010       0x40 build/default/production/DIO_Interface.o
- .debug_ranges  0x0000000000000050       0x30 build/default/production/mLEDs.o
- .debug_ranges  0x0000000000000080       0x18 build/default/production/mButtons.o
+ .debug_ranges  0x0000000000000050       0x18 build/default/production/mButtons.o
+ .debug_ranges  0x0000000000000068       0x38 build/default/production/m7Segment.o
 
 .debug_macro
  *(.debug_macro)
@@ -440,74 +506,84 @@ LOAD data_init
  .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x3c C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
 
-.text.BTNs_isPressed
+.text.init_7Seg
                 0x000000000000006c       0x56
- .text.BTNs_isPressed
-                0x000000000000006c       0x56 build/default/production/mButtons.o
-                0x000000000000006c                BTNs_isPressed
+ .text.init_7Seg
+                0x000000000000006c       0x56 build/default/production/m7Segment.o
+                0x000000000000006c                init_7Seg
+
+.text._7Seg_write_num
+                0x00000000000000c2       0x44
+ .text._7Seg_write_num
+                0x00000000000000c2       0x44 build/default/production/m7Segment.o
+                0x00000000000000c2                _7Seg_write_num
 
 .text.DIO_Set_PIN_DIR
-                0x00000000000000c2       0x40
+                0x0000000000000106       0x40
  .text.DIO_Set_PIN_DIR
-                0x00000000000000c2       0x40 build/default/production/DIO_Interface.o
-                0x00000000000000c2                DIO_Set_PIN_DIR
-
-.text.DIO_Read_PIN
-                0x0000000000000102       0x3e
- .text.DIO_Read_PIN
-                0x0000000000000102       0x3e build/default/production/DIO_Interface.o
-                0x0000000000000102                DIO_Read_PIN
+                0x0000000000000106       0x40 build/default/production/DIO_Interface.o
+                0x0000000000000106                DIO_Set_PIN_DIR
 
 .text.DIO_Set_PIN_VALUE
-                0x0000000000000140       0x3a
+                0x0000000000000146       0x3a
  .text.DIO_Set_PIN_VALUE
-                0x0000000000000140       0x3a build/default/production/DIO_Interface.o
-                0x0000000000000140                DIO_Set_PIN_VALUE
+                0x0000000000000146       0x3a build/default/production/DIO_Interface.o
+                0x0000000000000146                DIO_Set_PIN_VALUE
 
-.text.LED_ON    0x000000000000017a       0x36
- .text.LED_ON   0x000000000000017a       0x36 build/default/production/mLEDs.o
-                0x000000000000017a                LED_ON
+.text.m7Seg1_write
+                0x0000000000000180       0x34
+ .text.m7Seg1_write
+                0x0000000000000180       0x34 build/default/production/m7Segment.o
+                0x0000000000000180                m7Seg1_write
 
-.text.LED_OFF   0x00000000000001b0       0x36
- .text.LED_OFF  0x00000000000001b0       0x36 build/default/production/mLEDs.o
-                0x00000000000001b0                LED_OFF
+.text.m7Seg2_write
+                0x00000000000001b4       0x34
+ .text.m7Seg2_write
+                0x00000000000001b4       0x34 build/default/production/m7Segment.o
+                0x00000000000001b4                m7Seg2_write
 
-.text.init_LEDs
-                0x00000000000001e6       0x26
- .text.init_LEDs
-                0x00000000000001e6       0x26 build/default/production/mLEDs.o
-                0x00000000000001e6                init_LEDs
+.text.main      0x00000000000001e8       0x2a
+ .text.main     0x00000000000001e8       0x2a build/default/production/main.o
+                0x00000000000001e8                main
 
 .text.init_BTNS
-                0x000000000000020c       0x26
+                0x0000000000000212       0x26
  .text.init_BTNS
-                0x000000000000020c       0x26 build/default/production/mButtons.o
-                0x000000000000020c                init_BTNS
+                0x0000000000000212       0x26 build/default/production/mButtons.o
+                0x0000000000000212                init_BTNS
 
-.text.main      0x0000000000000232       0x22
- .text.main     0x0000000000000232       0x22 build/default/production/main.o
-                0x0000000000000232                main
+.text.m7Seg_EN1
+                0x0000000000000238       0x24
+ .text.m7Seg_EN1
+                0x0000000000000238       0x24 build/default/production/m7Segment.o
+                0x0000000000000238                m7Seg_EN1
 
-.text           0x0000000000000254        0x4
- .text          0x0000000000000254        0x4 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
-                0x0000000000000254                __vector_1
-                0x0000000000000254                __vector_12
-                0x0000000000000254                __bad_interrupt
-                0x0000000000000254                __vector_6
-                0x0000000000000254                __vector_3
-                0x0000000000000254                __vector_11
-                0x0000000000000254                __vector_13
-                0x0000000000000254                __vector_17
-                0x0000000000000254                __vector_19
-                0x0000000000000254                __vector_7
-                0x0000000000000254                __vector_5
-                0x0000000000000254                __vector_4
-                0x0000000000000254                __vector_9
-                0x0000000000000254                __vector_2
-                0x0000000000000254                __vector_15
-                0x0000000000000254                __vector_8
-                0x0000000000000254                __vector_14
-                0x0000000000000254                __vector_10
-                0x0000000000000254                __vector_16
-                0x0000000000000254                __vector_18
-                0x0000000000000254                __vector_20
+.text.m7Seg_EN2
+                0x000000000000025c       0x24
+ .text.m7Seg_EN2
+                0x000000000000025c       0x24 build/default/production/m7Segment.o
+                0x000000000000025c                m7Seg_EN2
+
+.text           0x0000000000000280        0x4
+ .text          0x0000000000000280        0x4 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
+                0x0000000000000280                __vector_1
+                0x0000000000000280                __vector_12
+                0x0000000000000280                __bad_interrupt
+                0x0000000000000280                __vector_6
+                0x0000000000000280                __vector_3
+                0x0000000000000280                __vector_11
+                0x0000000000000280                __vector_13
+                0x0000000000000280                __vector_17
+                0x0000000000000280                __vector_19
+                0x0000000000000280                __vector_7
+                0x0000000000000280                __vector_5
+                0x0000000000000280                __vector_4
+                0x0000000000000280                __vector_9
+                0x0000000000000280                __vector_2
+                0x0000000000000280                __vector_15
+                0x0000000000000280                __vector_8
+                0x0000000000000280                __vector_14
+                0x0000000000000280                __vector_10
+                0x0000000000000280                __vector_16
+                0x0000000000000280                __vector_18
+                0x0000000000000280                __vector_20
