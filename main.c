@@ -15,6 +15,12 @@
 #include "mBuzzer.h"
 #include "mRelay.h"
 #include "m7Segment.h"
+#include "mLCD4.h"
+
+
+
+char arr[] = "ALEX 47";
+
 
 int main(void) {
     /* Replace with your application code */
@@ -25,21 +31,17 @@ int main(void) {
     int num = 99;
 
     int counter = 0;
+    
+    init_LCD4();
+    
+    int temp = 65;
     while (1) {
-//        if (BTNs_isPressed(BTN0)) {
-//            num++;
-//            _delay_ms(200);
-//        }
 
-        counter++;
         
-        if(counter == 100){
-            num--;
-            counter = 0;
-        }
         
-        _7Seg_write_num(num);
-        
+        LCD4_num(temp);
+        _delay_ms(500);
+        LCD4_clear();
 
     }
 }

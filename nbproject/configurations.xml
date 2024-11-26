@@ -10,6 +10,8 @@
       <itemPath>mRelay.h</itemPath>
       <itemPath>mBuzzer.h</itemPath>
       <itemPath>m7Segment.h</itemPath>
+      <itemPath>mLCD8.h</itemPath>
+      <itemPath>mLCD4.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -25,6 +27,8 @@
       <itemPath>mRelay.c</itemPath>
       <itemPath>mBuzzer.c</itemPath>
       <itemPath>m7Segment.c</itemPath>
+      <itemPath>mLCD8.c</itemPath>
+      <itemPath>mLCD4.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

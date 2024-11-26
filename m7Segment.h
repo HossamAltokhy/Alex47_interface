@@ -29,6 +29,7 @@ void m7Seg2_write(char num);
 
 void m7Seg_EN1(char state);
 void m7Seg_EN2(char state);
+
 void _7Seg_write_num(char num);
 
 #endif	/* M7SEGMENT_H */
