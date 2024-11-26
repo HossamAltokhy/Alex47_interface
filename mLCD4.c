@@ -50,6 +50,7 @@ void LCD4_cmd(char cmd) {
 
 void LCD4_clear() {
     LCD4_cmd(0x01);
+    _delay_ms(10);
 }
 
 void LCD4_Enable() {

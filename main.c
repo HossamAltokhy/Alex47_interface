@@ -18,30 +18,40 @@
 #include "mLCD4.h"
 
 
-
-char arr[] = "ALEX 47";
-
+char led0_ON_str[]= "LED0 is ON";
+char led0_OFF_str[]= "LED0 is OFF";
 
 int main(void) {
     /* Replace with your application code */
 
-
-    init_7Seg();
+    // btn >> increment var >> LCD
+    
+    // btn >> decrement var >> LCD
+    
     init_BTNS();
-    int num = 99;
-
-    int counter = 0;
-    
+    init_LEDs();
+    _delay_ms(10);
     init_LCD4();
-    
-    int temp = 65;
+    _delay_ms(50);
+    int temp  = 50;
     while (1) {
 
+        if(BTNs_isPressed(BTN0)){
+            LED_ON(LED0);
+            LCD4_clear();
+            LCD4_str(led0_ON_str);
+            _delay_ms(200);
+        }
+     
+        if(BTNs_isPressed(BTN1)){
+            LED_OFF(LED0);
+            LCD4_clear();
+            LCD4_str(led0_OFF_str);
+            _delay_ms(200);
+        }
         
+       
         
-        LCD4_num(temp);
-        _delay_ms(500);
-        LCD4_clear();
 
     }
 }
