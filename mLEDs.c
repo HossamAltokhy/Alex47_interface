@@ -51,3 +51,19 @@ void LED_OFF(char LED){
             break;
     }
 }
+
+void LED_TOGGLE(char LED){
+    switch(LED){
+        case LED0:
+            DIO_Toggle_PIN(LED0_PORT, LED0);
+            break;
+        case LED1:
+            DIO_Toggle_PIN(LED1_PORT, LED1);
+            break;
+        case LED2:
+            DIO_Toggle_PIN(LED2_PORT, LED2);
+            break;
+    }
+}
+
+

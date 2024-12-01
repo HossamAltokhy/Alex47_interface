@@ -1,5 +1,5 @@
-build/default/production/main.o.d build/default/production/main.o: main.c \
- c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\io.h \
+build/default/production/EXT_INT.o.d build/default/production/EXT_INT.o: \
+ EXT_INT.c c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\io.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\sfr_defs.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\inttypes.h \
  c:\program\ files\microchip\xc8\v2.32\avr\lib\gcc\avr\5.4.0\include\stdint.h \
@@ -11,11 +11,7 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\fuse.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\lock.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\interrupt.h \
- c:\program\ files\microchip\xc8\v2.32\avr\avr\include\util\delay.h \
- c:\program\ files\microchip\xc8\v2.32\avr\avr\include\util\delay_basic.h \
- c:\program\ files\microchip\xc8\v2.32\avr\avr\include\math.h \
- DIO_Interface.h mLEDs.h mButtons.h mBuzzer.h mRelay.h m7Segment.h \
- mLCD4.h EXT_INT.h
+ EXT_INT.h
 
 c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\io.h:
 
@@ -40,25 +36,5 @@ c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\fuse.h:
 c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\lock.h:
 
 c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\interrupt.h:
-
-c:\program\ files\microchip\xc8\v2.32\avr\avr\include\util\delay.h:
-
-c:\program\ files\microchip\xc8\v2.32\avr\avr\include\util\delay_basic.h:
-
-c:\program\ files\microchip\xc8\v2.32\avr\avr\include\math.h:
-
-DIO_Interface.h:
-
-mLEDs.h:
-
-mButtons.h:
-
-mBuzzer.h:
-
-mRelay.h:
-
-m7Segment.h:
-
-mLCD4.h:
 
 EXT_INT.h:
