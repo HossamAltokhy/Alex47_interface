@@ -21,6 +21,8 @@
 #define ADC_CH6       6
 #define ADC_CH7       7
 
+#define ADC_CH0_CH1_X1   16
+
 
 #define ADC_PRE_2     1
 #define ADC_PRE_4     2

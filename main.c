@@ -23,18 +23,26 @@
 
 int main(void) {
     /* Replace with your application code */
-    char str[] = "mV";
+    char str0[] = "mV (CH0)";
+    char str1[] = "mV (CH1)";
     init_LCD4();
-    init_ADC(ADC_CH0, ADC_REF_AREF, ADC_PRE_128);
+    init_ADC(ADC_CH0, ADC_REF_AVCC, ADC_PRE_128);
     
     while (1) {
 
-       _delay_ms(50);
+       ADC_select_CH(ADC_CH0);
        ADC_SC();
        LCD4_clear();
        LCD4_num(ADC_read());
-       LCD4_str(str);
-
+       LCD4_str(str0);
+       _delay_ms(500);
+       
+       ADC_select_CH(ADC_CH1);
+       ADC_SC();
+       LCD4_clear();
+       LCD4_num(ADC_read());
+       LCD4_str(str1);
+       _delay_ms(500);
 
     }
 }
