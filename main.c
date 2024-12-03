@@ -20,39 +20,40 @@
 #include "EXT_INT.h"
 
 
-ISR(INT1_vect){
-    
-    LED_TOGGLE(LED1);
-            
+
+int num = 0;
+
+ISR(INT0_vect) {
+
+    num++;
+    LCD4_clear();
+    LCD4_num(num);
+
 }
-
-
-
-
-
+char str[] = "Hello";
 int main(void) {
     /* Replace with your application code */
-    
+
     init_LEDs();
     init_BTNS();
-    
-    
-    
-    init_INT(INTERRUPT_1, INT_FALLING_EDGE);
+    init_LCD4();
+
+
+    LCD4_str(str);
+
+    init_INT(INTERRUPT_0, INT_RISING_EDGE);
     INT_Enable_Global();
-    
+
     while (1) {
 
-        if(BTNs_isPressed(BTN0)){
-            LED_TOGGLE(LED0);
+        if (BTNs_isPressed(BTN0)) {
+            num++;
+            LCD4_clear();
+            LCD4_num(num);
             _delay_ms(500);
         }
-//        if(BTNs_isPressed(BTN1)){
-//            LED_OFF(LED0);
-//            _delay_ms(250);
-//        }
-//       
-        
+
+
 
     }
 }

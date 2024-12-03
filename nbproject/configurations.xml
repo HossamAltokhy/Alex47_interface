@@ -13,6 +13,7 @@
       <itemPath>mLCD8.h</itemPath>
       <itemPath>mLCD4.h</itemPath>
       <itemPath>EXT_INT.h</itemPath>
+      <itemPath>mADC.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -31,6 +32,7 @@
       <itemPath>mLCD8.c</itemPath>
       <itemPath>mLCD4.c</itemPath>
       <itemPath>EXT_INT.c</itemPath>
+      <itemPath>mADC.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

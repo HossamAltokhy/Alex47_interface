@@ -2,6 +2,8 @@ Archive member included to satisfy reference by file (symbol)
 
 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
                               C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o (exit)
+c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
+                              build/default/production/main.o (__do_copy_data)
 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
                               build/default/production/mLCD8.o (__itoa_ncheck)
 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
@@ -19,14 +21,12 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/default/production/DIO_Interface.o
  .data          0x0000000000000000        0x0 build/default/production/DIO_Interface.o
  .bss           0x0000000000000000        0x0 build/default/production/DIO_Interface.o
- .text.DIO_Set_PORT_DIR
-                0x0000000000000000        0x8 build/default/production/DIO_Interface.o
  .text.DIO_Set_PORT_VALUE
                 0x0000000000000000        0x6 build/default/production/DIO_Interface.o
  .text.DIO_Read_PORT
                 0x0000000000000000        0xc build/default/production/DIO_Interface.o
- .text.DIO_Set_PIN_VALUE
-                0x0000000000000000       0x3a build/default/production/DIO_Interface.o
+ .text.DIO_Toggle_PIN
+                0x0000000000000000       0x18 build/default/production/DIO_Interface.o
  .text          0x0000000000000000        0x0 build/default/production/mLEDs.o
  .data          0x0000000000000000        0x0 build/default/production/mLEDs.o
  .bss           0x0000000000000000        0x0 build/default/production/mLEDs.o
@@ -35,6 +35,8 @@ Discarded input sections
                 0x0000000000000000       0x26 build/default/production/mLEDs.o
  .text.LED_ON   0x0000000000000000       0x36 build/default/production/mLEDs.o
  .text.LED_OFF  0x0000000000000000       0x36 build/default/production/mLEDs.o
+ .text.LED_TOGGLE
+                0x0000000000000000       0x30 build/default/production/mLEDs.o
  .text          0x0000000000000000        0x0 build/default/production/mButtons.o
  .data          0x0000000000000000        0x0 build/default/production/mButtons.o
  .bss           0x0000000000000000        0x0 build/default/production/mButtons.o
@@ -131,30 +133,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/default/production/mLCD4.o
  .data          0x0000000000000000        0x0 build/default/production/mLCD4.o
  .bss           0x0000000000000000        0x0 build/default/production/mLCD4.o
- .text.LCD4_Enable
-                0x0000000000000000       0x26 build/default/production/mLCD4.o
- .text.LCD4_write
-                0x0000000000000000       0x3a build/default/production/mLCD4.o
- .text.LCD4_cmd
-                0x0000000000000000       0x3a build/default/production/mLCD4.o
- .text.init_LCD4
-                0x0000000000000000       0x5a build/default/production/mLCD4.o
- .text.LCD4_clear
-                0x0000000000000000       0x14 build/default/production/mLCD4.o
- .text.LCD4_str
-                0x0000000000000000       0x1e build/default/production/mLCD4.o
- .text.LCD4_num
-                0x0000000000000000       0x3a build/default/production/mLCD4.o
- .debug_info    0x0000000000000000      0x799 build/default/production/mLCD4.o
- .debug_abbrev  0x0000000000000000      0x1f6 build/default/production/mLCD4.o
- .debug_loc     0x0000000000000000      0x26a build/default/production/mLCD4.o
- .debug_aranges
-                0x0000000000000000       0x50 build/default/production/mLCD4.o
- .debug_ranges  0x0000000000000000       0x40 build/default/production/mLCD4.o
- .debug_line    0x0000000000000000      0x221 build/default/production/mLCD4.o
- .debug_str     0x0000000000000000       0x67 build/default/production/mLCD4.o
- .comment       0x0000000000000000       0x30 build/default/production/mLCD4.o
- .debug_frame   0x0000000000000000       0xb0 build/default/production/mLCD4.o
  .text          0x0000000000000000        0x0 build/default/production/EXT_INT.o
  .data          0x0000000000000000        0x0 build/default/production/EXT_INT.o
  .bss           0x0000000000000000        0x0 build/default/production/EXT_INT.o
@@ -176,28 +154,35 @@ Discarded input sections
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
  .text.libgcc.fixed
                 0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
- .text.avrlibc  0x0000000000000000       0x16 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
- .stack.descriptors.hdr
-                0x0000000000000000        0xe c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
  .stack.descriptors
                 0x0000000000000000       0x1b c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
- .text.avrlibc  0x0000000000000000       0x34 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
- .stack.descriptors.hdr
-                0x0000000000000000        0xe c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
  .stack.descriptors
                 0x0000000000000000       0x36 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
- .text.avrlibc  0x0000000000000000       0x20 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
- .stack.descriptors.hdr
-                0x0000000000000000        0xe c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
  .stack.descriptors
                 0x0000000000000000       0x14 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
 
@@ -336,7 +321,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000       0x6c
+.text           0x0000000000000000       0xb4
  *(.vectors)
  .vectors       0x0000000000000000       0x54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
                 0x0000000000000000                __vector_default
@@ -344,40 +329,43 @@ END GROUP
  *(.vectors)
  *(.progmem.gcc*)
  *(.dinit)
- .dinit         0x0000000000000054        0x0 data_init
-                0x0000000000000054                . = ALIGN (0x2)
-                0x0000000000000054                __trampolines_start = .
+ .dinit         0x0000000000000054        0xc data_init
+                0x0000000000000060                . = ALIGN (0x2)
+                0x0000000000000060                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x0000000000000054        0x0 linker stubs
+ .trampolines   0x0000000000000060        0x0 linker stubs
  *(.trampolines*)
-                0x0000000000000054                __trampolines_end = .
+                0x0000000000000060                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
-                0x0000000000000054                . = ALIGN (0x2)
+                0x0000000000000060                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x0000000000000054                __ctors_start = .
+                0x0000000000000060                __ctors_start = .
  *(.ctors)
-                0x0000000000000054                __ctors_end = .
-                0x0000000000000054                __dtors_start = .
+                0x0000000000000060                __ctors_end = .
+                0x0000000000000060                __dtors_start = .
  *(.dtors)
-                0x0000000000000054                __dtors_end = .
+                0x0000000000000060                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x0000000000000054        0x0 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
-                0x0000000000000054                __init
+ .init0         0x0000000000000060        0x0 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
+                0x0000000000000060                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x0000000000000054        0xc C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
+ .init2         0x0000000000000060        0xc C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
+ .init4         0x000000000000006c       0x3c c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
+                0x000000000000006c                __do_copy_data
+                0x000000000000009a                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -388,13 +376,13 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000000000000060        0x8 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
+ .init9         0x00000000000000a8        0x8 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
  *(.init9)
-                0x0000000000000068                . = ALIGN (0x2)
+                0x00000000000000b0                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000000068        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
-                0x0000000000000068                _exit
-                0x0000000000000068                exit
+ .fini9         0x00000000000000b0        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
+                0x00000000000000b0                _exit
+                0x00000000000000b0                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -413,11 +401,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000000068        0x4 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
+ .fini0         0x00000000000000b0        0x4 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
  *(.fini0)
-                0x000000000000006c                _etext = .
+                0x00000000000000b4                _etext = .
 
-.data           0x0000000000800060        0x0 load address 0x000000000000006c
+.data           0x0000000000800060        0x0 load address 0x00000000000000b4
                 [!provide]                        PROVIDE (__data_start, .)
  *(.gnu.linkonce.d*)
  *(.gnu.linkonce.r*)
@@ -429,8 +417,8 @@ END GROUP
                 [!provide]                        PROVIDE (__bss_start, .)
  *(COMMON)
                 [!provide]                        PROVIDE (__bss_end, .)
-                0x000000000000006c                __data_load_start = LOADADDR (.data)
-                0x000000000000006c                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000000000000b4                __data_load_start = LOADADDR (.data)
+                0x00000000000000b4                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x0000000000800060        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
@@ -482,12 +470,19 @@ END GROUP
  .comment       0x000000000000002f       0x30 build/default/production/DIO_Interface.o
  .comment       0x000000000000002f       0x30 build/default/production/mLEDs.o
  .comment       0x000000000000002f       0x30 build/default/production/mButtons.o
+ .comment       0x000000000000002f       0x30 build/default/production/mLCD4.o
  .comment       0x000000000000002f       0x30 build/default/production/EXT_INT.o
 
 .stack.descriptors.hdr
-                0x0000000000000000        0xe
+                0x0000000000000000       0x38
  .stack.descriptors.hdr
                 0x0000000000000000        0xe c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
+ .stack.descriptors.hdr
+                0x000000000000000e        0xe c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
+ .stack.descriptors.hdr
+                0x000000000000001c        0xe c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
+ .stack.descriptors.hdr
+                0x000000000000002a        0xe c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
@@ -504,7 +499,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x110
+.debug_aranges  0x0000000000000000      0x160
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0x28 build/default/production/main.o
@@ -515,61 +510,69 @@ END GROUP
  .debug_aranges
                 0x00000000000000c0       0x28 build/default/production/mButtons.o
  .debug_aranges
-                0x00000000000000e8       0x28 build/default/production/EXT_INT.o
+                0x00000000000000e8       0x50 build/default/production/mLCD4.o
+ .debug_aranges
+                0x0000000000000138       0x28 build/default/production/EXT_INT.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x1814
+.debug_info     0x0000000000000000     0x2047
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x4e6 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
- .debug_info    0x00000000000004e6      0x3af build/default/production/main.o
- .debug_info    0x0000000000000895      0x426 build/default/production/DIO_Interface.o
- .debug_info    0x0000000000000cbb      0x56a build/default/production/mLEDs.o
- .debug_info    0x0000000000001225      0x378 build/default/production/mButtons.o
- .debug_info    0x000000000000159d      0x277 build/default/production/EXT_INT.o
+ .debug_info    0x00000000000004e6      0x449 build/default/production/main.o
+ .debug_info    0x000000000000092f      0x426 build/default/production/DIO_Interface.o
+ .debug_info    0x0000000000000d55      0x56a build/default/production/mLEDs.o
+ .debug_info    0x00000000000012bf      0x378 build/default/production/mButtons.o
+ .debug_info    0x0000000000001637      0x799 build/default/production/mLCD4.o
+ .debug_info    0x0000000000001dd0      0x277 build/default/production/EXT_INT.o
 
-.debug_abbrev   0x0000000000000000      0x823
+.debug_abbrev   0x0000000000000000      0xa31
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x4a3 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
- .debug_abbrev  0x00000000000004a3      0x119 build/default/production/main.o
- .debug_abbrev  0x00000000000005bc       0x9f build/default/production/DIO_Interface.o
- .debug_abbrev  0x000000000000065b       0xa5 build/default/production/mLEDs.o
- .debug_abbrev  0x0000000000000700       0xb6 build/default/production/mButtons.o
- .debug_abbrev  0x00000000000007b6       0x6d build/default/production/EXT_INT.o
+ .debug_abbrev  0x00000000000004a3      0x131 build/default/production/main.o
+ .debug_abbrev  0x00000000000005d4       0x9f build/default/production/DIO_Interface.o
+ .debug_abbrev  0x0000000000000673       0xa5 build/default/production/mLEDs.o
+ .debug_abbrev  0x0000000000000718       0xb6 build/default/production/mButtons.o
+ .debug_abbrev  0x00000000000007ce      0x1f6 build/default/production/mLCD4.o
+ .debug_abbrev  0x00000000000009c4       0x6d build/default/production/EXT_INT.o
 
-.debug_line     0x0000000000000000      0x653
+.debug_line     0x0000000000000000      0x8a3
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x119 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
- .debug_line    0x0000000000000119      0x129 build/default/production/main.o
- .debug_line    0x0000000000000242       0xfa build/default/production/DIO_Interface.o
- .debug_line    0x000000000000033c      0x179 build/default/production/mLEDs.o
- .debug_line    0x00000000000004b5       0xdc build/default/production/mButtons.o
- .debug_line    0x0000000000000591       0xc2 build/default/production/EXT_INT.o
+ .debug_line    0x0000000000000119      0x158 build/default/production/main.o
+ .debug_line    0x0000000000000271       0xfa build/default/production/DIO_Interface.o
+ .debug_line    0x000000000000036b      0x179 build/default/production/mLEDs.o
+ .debug_line    0x00000000000004e4       0xdc build/default/production/mButtons.o
+ .debug_line    0x00000000000005c0      0x221 build/default/production/mLCD4.o
+ .debug_line    0x00000000000007e1       0xc2 build/default/production/EXT_INT.o
 
-.debug_frame    0x0000000000000000      0x1ec
+.debug_frame    0x0000000000000000      0x29c
  *(.debug_frame)
  .debug_frame   0x0000000000000000       0x7c build/default/production/main.o
  .debug_frame   0x000000000000007c       0x84 build/default/production/DIO_Interface.o
  .debug_frame   0x0000000000000100       0x74 build/default/production/mLEDs.o
  .debug_frame   0x0000000000000174       0x44 build/default/production/mButtons.o
- .debug_frame   0x00000000000001b8       0x34 build/default/production/EXT_INT.o
+ .debug_frame   0x00000000000001b8       0xb0 build/default/production/mLCD4.o
+ .debug_frame   0x0000000000000268       0x34 build/default/production/EXT_INT.o
 
-.debug_str      0x0000000000000000      0x233
+.debug_str      0x0000000000000000      0x2b6
  *(.debug_str)
  .debug_str     0x0000000000000000      0x196 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
- .debug_str     0x0000000000000196       0x49 build/default/production/main.o
- .debug_str     0x00000000000001df        0x6 build/default/production/DIO_Interface.o
- .debug_str     0x00000000000001e5       0x31 build/default/production/mLEDs.o
- .debug_str     0x0000000000000216       0x1d build/default/production/mButtons.o
- .debug_str     0x0000000000000233        0x0 build/default/production/EXT_INT.o
+ .debug_str     0x0000000000000196       0x65 build/default/production/main.o
+ .debug_str     0x00000000000001fb        0x6 build/default/production/DIO_Interface.o
+ .debug_str     0x0000000000000201       0x31 build/default/production/mLEDs.o
+ .debug_str     0x0000000000000232       0x1d build/default/production/mButtons.o
+ .debug_str     0x000000000000024f       0x67 build/default/production/mLCD4.o
+ .debug_str     0x00000000000002b6        0x0 build/default/production/EXT_INT.o
 
-.debug_loc      0x0000000000000000      0x346
+.debug_loc      0x0000000000000000      0x5b0
  *(.debug_loc)
  .debug_loc     0x0000000000000000      0x136 build/default/production/DIO_Interface.o
  .debug_loc     0x0000000000000136       0xf9 build/default/production/mLEDs.o
  .debug_loc     0x000000000000022f       0x53 build/default/production/mButtons.o
- .debug_loc     0x0000000000000282       0xc4 build/default/production/EXT_INT.o
+ .debug_loc     0x0000000000000282      0x26a build/default/production/mLCD4.o
+ .debug_loc     0x00000000000004ec       0xc4 build/default/production/EXT_INT.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -589,13 +592,14 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000       0xc0
+.debug_ranges   0x0000000000000000      0x100
  *(.debug_ranges)
  .debug_ranges  0x0000000000000000       0x18 build/default/production/main.o
  .debug_ranges  0x0000000000000018       0x40 build/default/production/DIO_Interface.o
  .debug_ranges  0x0000000000000058       0x38 build/default/production/mLEDs.o
  .debug_ranges  0x0000000000000090       0x18 build/default/production/mButtons.o
- .debug_ranges  0x00000000000000a8       0x18 build/default/production/EXT_INT.o
+ .debug_ranges  0x00000000000000a8       0x40 build/default/production/mLCD4.o
+ .debug_ranges  0x00000000000000e8       0x18 build/default/production/EXT_INT.o
 
 .debug_macro
  *(.debug_macro)
@@ -608,88 +612,148 @@ LOAD data_init
  .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x3c C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
 
+.bss.num        0x0000000000800066        0x2
+ .bss.num       0x0000000000800066        0x2 build/default/production/main.o
+                0x0000000000800066                num
+
+.text.__vector_1
+                0x00000000000000b4       0x66
+ .text.__vector_1
+                0x00000000000000b4       0x66 build/default/production/main.o
+                0x00000000000000b4                __vector_1
+
+.text.main      0x000000000000011a       0x64
+ .text.main     0x000000000000011a       0x64 build/default/production/main.o
+                0x000000000000011a                main
+
+.text.init_LCD4
+                0x000000000000017e       0x5a
+ .text.init_LCD4
+                0x000000000000017e       0x5a build/default/production/mLCD4.o
+                0x000000000000017e                init_LCD4
+
 .text.BTNs_isPressed
-                0x000000000000006c       0x56
+                0x00000000000001d8       0x56
  .text.BTNs_isPressed
-                0x000000000000006c       0x56 build/default/production/mButtons.o
-                0x000000000000006c                BTNs_isPressed
+                0x00000000000001d8       0x56 build/default/production/mButtons.o
+                0x00000000000001d8                BTNs_isPressed
 
-.text.init_INT  0x00000000000000c2       0x54
+.text.init_INT  0x000000000000022e       0x54
  .text.init_INT
-                0x00000000000000c2       0x54 build/default/production/EXT_INT.o
-                0x00000000000000c2                init_INT
-
-.text.__vector_2
-                0x0000000000000116       0x4a
- .text.__vector_2
-                0x0000000000000116       0x4a build/default/production/main.o
-                0x0000000000000116                __vector_2
+                0x000000000000022e       0x54 build/default/production/EXT_INT.o
+                0x000000000000022e                init_INT
 
 .text.DIO_Set_PIN_DIR
-                0x0000000000000160       0x40
+                0x0000000000000282       0x40
  .text.DIO_Set_PIN_DIR
-                0x0000000000000160       0x40 build/default/production/DIO_Interface.o
-                0x0000000000000160                DIO_Set_PIN_DIR
+                0x0000000000000282       0x40 build/default/production/DIO_Interface.o
+                0x0000000000000282                DIO_Set_PIN_DIR
 
 .text.DIO_Read_PIN
-                0x00000000000001a0       0x3e
+                0x00000000000002c2       0x3e
  .text.DIO_Read_PIN
-                0x00000000000001a0       0x3e build/default/production/DIO_Interface.o
-                0x00000000000001a0                DIO_Read_PIN
+                0x00000000000002c2       0x3e build/default/production/DIO_Interface.o
+                0x00000000000002c2                DIO_Read_PIN
 
-.text.main      0x00000000000001de       0x3c
- .text.main     0x00000000000001de       0x3c build/default/production/main.o
-                0x00000000000001de                main
+.text.DIO_Set_PIN_VALUE
+                0x0000000000000300       0x3a
+ .text.DIO_Set_PIN_VALUE
+                0x0000000000000300       0x3a build/default/production/DIO_Interface.o
+                0x0000000000000300                DIO_Set_PIN_VALUE
 
-.text.LED_TOGGLE
-                0x000000000000021a       0x30
- .text.LED_TOGGLE
-                0x000000000000021a       0x30 build/default/production/mLEDs.o
-                0x000000000000021a                LED_TOGGLE
+.text.LCD4_write
+                0x000000000000033a       0x3a
+ .text.LCD4_write
+                0x000000000000033a       0x3a build/default/production/mLCD4.o
+                0x000000000000033a                LCD4_write
+
+.text.LCD4_cmd  0x0000000000000374       0x3a
+ .text.LCD4_cmd
+                0x0000000000000374       0x3a build/default/production/mLCD4.o
+                0x0000000000000374                LCD4_cmd
+
+.text.LCD4_num  0x00000000000003ae       0x3a
+ .text.LCD4_num
+                0x00000000000003ae       0x3a build/default/production/mLCD4.o
+                0x00000000000003ae                LCD4_num
+
+.text.avrlibc   0x00000000000003e8       0x34
+ .text.avrlibc  0x00000000000003e8       0x34 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(utoa_ncheck.o)
+                0x00000000000003e8                __utoa_ncheck
+                0x00000000000003ea                __utoa_common
 
 .text.init_LEDs
-                0x000000000000024a       0x26
+                0x000000000000041c       0x26
  .text.init_LEDs
-                0x000000000000024a       0x26 build/default/production/mLEDs.o
-                0x000000000000024a                init_LEDs
+                0x000000000000041c       0x26 build/default/production/mLEDs.o
+                0x000000000000041c                init_LEDs
 
 .text.init_BTNS
-                0x0000000000000270       0x26
+                0x0000000000000442       0x26
  .text.init_BTNS
-                0x0000000000000270       0x26 build/default/production/mButtons.o
-                0x0000000000000270                init_BTNS
+                0x0000000000000442       0x26 build/default/production/mButtons.o
+                0x0000000000000442                init_BTNS
 
-.text.DIO_Toggle_PIN
-                0x0000000000000296       0x18
- .text.DIO_Toggle_PIN
-                0x0000000000000296       0x18 build/default/production/DIO_Interface.o
-                0x0000000000000296                DIO_Toggle_PIN
+.text.LCD4_Enable
+                0x0000000000000468       0x26
+ .text.LCD4_Enable
+                0x0000000000000468       0x26 build/default/production/mLCD4.o
+                0x0000000000000468                LCD4_Enable
 
-.text           0x00000000000002ae        0x4
- .text          0x00000000000002ae        0x4 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
-                0x00000000000002ae                __vector_1
-                0x00000000000002ae                __vector_12
-                0x00000000000002ae                __bad_interrupt
-                0x00000000000002ae                __vector_6
-                0x00000000000002ae                __vector_3
-                0x00000000000002ae                __vector_11
-                0x00000000000002ae                __vector_13
-                0x00000000000002ae                __vector_17
-                0x00000000000002ae                __vector_19
-                0x00000000000002ae                __vector_7
-                0x00000000000002ae                __vector_5
-                0x00000000000002ae                __vector_4
-                0x00000000000002ae                __vector_9
-                0x00000000000002ae                __vector_15
-                0x00000000000002ae                __vector_8
-                0x00000000000002ae                __vector_14
-                0x00000000000002ae                __vector_10
-                0x00000000000002ae                __vector_16
-                0x00000000000002ae                __vector_18
-                0x00000000000002ae                __vector_20
+.text.avrlibc   0x000000000000048e       0x20
+ .text.avrlibc  0x000000000000048e       0x20 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(strrev.o)
+                0x000000000000048e                strrev
+
+.text.LCD4_str  0x00000000000004ae       0x1e
+ .text.LCD4_str
+                0x00000000000004ae       0x1e build/default/production/mLCD4.o
+                0x00000000000004ae                LCD4_str
+
+.text.avrlibc   0x00000000000004cc       0x16
+ .text.avrlibc  0x00000000000004cc       0x16 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(itoa_ncheck.o)
+                0x00000000000004cc                __itoa_ncheck
+
+.text.LCD4_clear
+                0x00000000000004e2       0x14
+ .text.LCD4_clear
+                0x00000000000004e2       0x14 build/default/production/mLCD4.o
+                0x00000000000004e2                LCD4_clear
+
+.text.DIO_Set_PORT_DIR
+                0x00000000000004f6        0x8
+ .text.DIO_Set_PORT_DIR
+                0x00000000000004f6        0x8 build/default/production/DIO_Interface.o
+                0x00000000000004f6                DIO_Set_PORT_DIR
+
+.text           0x00000000000004fe        0x4
+ .text          0x00000000000004fe        0x4 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
+                0x00000000000004fe                __vector_12
+                0x00000000000004fe                __bad_interrupt
+                0x00000000000004fe                __vector_6
+                0x00000000000004fe                __vector_3
+                0x00000000000004fe                __vector_11
+                0x00000000000004fe                __vector_13
+                0x00000000000004fe                __vector_17
+                0x00000000000004fe                __vector_19
+                0x00000000000004fe                __vector_7
+                0x00000000000004fe                __vector_5
+                0x00000000000004fe                __vector_4
+                0x00000000000004fe                __vector_9
+                0x00000000000004fe                __vector_2
+                0x00000000000004fe                __vector_15
+                0x00000000000004fe                __vector_8
+                0x00000000000004fe                __vector_14
+                0x00000000000004fe                __vector_10
+                0x00000000000004fe                __vector_16
+                0x00000000000004fe                __vector_18
+                0x00000000000004fe                __vector_20
 
 .text.INT_Enable_Global
-                0x00000000000002b2        0x4
+                0x0000000000000502        0x4
  .text.INT_Enable_Global
-                0x00000000000002b2        0x4 build/default/production/EXT_INT.o
-                0x00000000000002b2                INT_Enable_Global
+                0x0000000000000502        0x4 build/default/production/EXT_INT.o
+                0x0000000000000502                INT_Enable_Global
+
+.data.str       0x0000000000800060        0x6 load address 0x0000000000000506
+ .data.str      0x0000000000800060        0x6 build/default/production/main.o
+                0x0000000000800060                str
