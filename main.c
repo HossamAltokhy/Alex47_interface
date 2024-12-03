@@ -18,41 +18,22 @@
 #include "m7Segment.h"
 #include "mLCD4.h"
 #include "EXT_INT.h"
+#include "mADC.h"
 
 
-
-int num = 0;
-
-ISR(INT0_vect) {
-
-    num++;
-    LCD4_clear();
-    LCD4_num(num);
-
-}
-char str[] = "Hello";
 int main(void) {
     /* Replace with your application code */
-
-    init_LEDs();
-    init_BTNS();
+    char str[] = "mV";
     init_LCD4();
-
-
-    LCD4_str(str);
-
-    init_INT(INTERRUPT_0, INT_RISING_EDGE);
-    INT_Enable_Global();
-
+    init_ADC(ADC_CH0, ADC_REF_AREF, ADC_PRE_128);
+    
     while (1) {
 
-        if (BTNs_isPressed(BTN0)) {
-            num++;
-            LCD4_clear();
-            LCD4_num(num);
-            _delay_ms(500);
-        }
-
+       _delay_ms(50);
+       ADC_SC();
+       LCD4_clear();
+       LCD4_num(ADC_read());
+       LCD4_str(str);
 
 
     }
