@@ -31,7 +31,15 @@
 #define ADC_PRE_32    5
 #define ADC_PRE_64    6
 #define ADC_PRE_128   7
-
+/**
+ * 
+ * ADC_STEP = Vref * 1 / 2^n 
+ * 
+ * n >> ADC resolution
+ * 
+ * ADC_STEP = 5 *1 / 1024 = 0.0048xxxxxx V
+ * ADC_STEP_mV = 4.88xxxxxxx mV 
+ */
 #define ADC_STEP      4.8875855327468230694037145650049
 
 void init_ADC(char ADC_CH, char ADC_REF, char ADC_PRE);
@@ -41,6 +49,7 @@ void ADC_EN();
 void ADC_select_PRE(char ADC_PRE);
 void ADC_SC();
 int  ADC_read();
+void ADC_INT_EN();
 
 
 #endif	/* MADC_H */

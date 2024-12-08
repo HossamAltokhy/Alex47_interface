@@ -20,6 +20,16 @@
 #include "EXT_INT.h"
 #include "mADC.h"
 
+#define TEMP_SENSOR   ADC_CH0
+
+
+int data = 0;
+
+ISR(ADC_vect){
+    data = ADC_read()/10.0;
+    //ADC_SC();
+}
+
 
 int main(void) {
     /* Replace with your application code */
@@ -28,33 +38,25 @@ int main(void) {
     char str1[] = ")";
     init_LCD4();
     init_BTNS();
+    
+    
     init_ADC(ADC_CH0, ADC_REF_AVCC, ADC_PRE_128);
+    sei();
+    
+    ADC_SC();
+    
+    
     
     while (1) {
 
-        if(BTNs_isPressed(BTN1)){
-            CHANNEL_ID++;
-            if(CHANNEL_ID > 7){
-                CHANNEL_ID = 0;
-            }
-            ADC_select_CH(CHANNEL_ID);
-            _delay_ms(300);
-        }
-        if(BTNs_isPressed(BTN2)){
-            CHANNEL_ID--;
-            if(CHANNEL_ID < 0){
-                CHANNEL_ID = 7;
-            }
-            ADC_select_CH(CHANNEL_ID);
-            _delay_ms(300);
-        }
         
         
-        ADC_SC();
+        
+        
         LCD4_clear();
-        LCD4_num(ADC_read());
+        LCD4_num(data);
         LCD4_str(str0);
-        LCD4_num(CHANNEL_ID);
+        LCD4_num(ADC_CH0);
         LCD4_str(str1);
         _delay_ms(200);
         

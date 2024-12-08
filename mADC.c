@@ -11,6 +11,14 @@ void init_ADC(char ADC_CH, char ADC_REF, char ADC_PRE){
     ADC_select_REF(ADC_REF);
     ADC_select_PRE(ADC_PRE);
     
+    // Enable Auto Trigger Enable Mode
+    ADCSRA |= (1<<ADATE);
+    // Select Tigger Source
+    //SFIOR |= (1<<ADTS1);
+    // Enable ADC Interrupt
+    ADC_INT_EN();
+    
+    
     // Enable ADC NOW
     ADC_EN();
 }
@@ -36,6 +44,10 @@ void ADC_SC(){
 }
 int  ADC_read(){
     // Pooling on Flag
-    while(!(ADCSRA & (1<<ADIF)));
+    //while(!(ADCSRA & (1<<ADIF)));
     return ADCW*ADC_STEP;
+}
+
+void ADC_INT_EN(){
+    ADCSRA |= (1<<ADIE);
 }
