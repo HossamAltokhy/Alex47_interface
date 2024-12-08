@@ -9,16 +9,16 @@
 #define	MLCD4_H
 
 
-#define LCD_DATA_DIR            &DDRA
-#define LCD_DATA_PORT           &PORTA
+#define LCD_DATA_DIR            &DDRC
+#define LCD_DATA_PORT           &PORTC
 
-#define LCD_CONTROL_PINS_DIR    &DDRB
-#define LCD_CONTROL_PINS_PORT   &PORTB
+#define LCD_CONTROL_PINS_DIR    &DDRC
+#define LCD_CONTROL_PINS_PORT   &PORTC
 
 
-#define LCD_EN    PB3
-#define LCD_RW    PB2
-#define LCD_RS    PB1
+#define LCD_EN    PC2
+#define LCD_RW    PC1
+#define LCD_RS    PC0
 
 
 // APIs
