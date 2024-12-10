@@ -12,11 +12,11 @@ void init_ADC(char ADC_CH, char ADC_REF, char ADC_PRE){
     ADC_select_PRE(ADC_PRE);
     
     // Enable Auto Trigger Enable Mode
-    ADCSRA |= (1<<ADATE);
+    //ADCSRA |= (1<<ADATE);
     // Select Tigger Source
     //SFIOR |= (1<<ADTS1);
     // Enable ADC Interrupt
-    ADC_INT_EN();
+    //ADC_INT_EN();
     
     
     // Enable ADC NOW

@@ -19,48 +19,57 @@
 #include "mLCD4.h"
 #include "EXT_INT.h"
 #include "mADC.h"
+#include "mTimer.h"
 
-#define TEMP_SENSOR   ADC_CH0
 
 
-int data = 0;
+int x = 0;
 
-ISR(ADC_vect){
-    data = ADC_read()/10.0;
-    //ADC_SC();
+ISR(TIMER0_OVF_vect) {
+
+    static int count = 0;
+
+    count++;
+
+    if (count == 61) {
+        
+        ADC_SC();
+        count = 0;
+    }
+
 }
 
 
+int reading =0;
+int lastReading =0;
 int main(void) {
     /* Replace with your application code */
-    signed char CHANNEL_ID =0;
-    char str0[] = "mV    (CH";
-    char str1[] = ")";
+
     init_LCD4();
-    init_BTNS();
     
+    init_ADC(ADC_CH1, ADC_REF_AVCC,ADC_PRE_128);
     
-    init_ADC(ADC_CH0, ADC_REF_AVCC, ADC_PRE_128);
+    init_Timer0(TIMER0_MODE_NORMAL, TIMER0_CS_PRE_1024);
+    
+    // Enable Indiviual Interrupt for Timer0
+    Timer0_INT_ENABLE(TIMER0_INT_TOV);
+   
+
+    // Enable Global Interrupt Enable
     sei();
-    
-    ADC_SC();
-    
-    
-    
+
     while (1) {
 
+        reading = ADC_read();
+        if(lastReading != reading){
+            LCD4_clear();
+            LCD4_num(reading);
+            lastReading = reading;
+        }
         
+       
         
-        
-        
-        LCD4_clear();
-        LCD4_num(data);
-        LCD4_str(str0);
-        LCD4_num(ADC_CH0);
-        LCD4_str(str1);
-        _delay_ms(200);
-        
+
 
     }
 }
-
