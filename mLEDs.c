@@ -23,6 +23,12 @@ void LEDs_OFF(){
     DIO_Set_PIN_VALUE(LED2_PORT, LED2, LOW);
 
 }
+
+void LEDs_TOG(){
+    DIO_Toggle_PIN(LED0_PORT, LED0);
+    DIO_Toggle_PIN(LED1_PORT, LED1);
+    DIO_Toggle_PIN(LED2_PORT, LED2);
+}
 void LED_ON(char LED){
     switch(LED){
         case LED0:

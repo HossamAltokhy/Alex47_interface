@@ -40,5 +40,11 @@ void Timer2_INT_ENABLE(char TIMER_INT);
 void Timer2_SET_COMP_VAL(char TIMER_COMP_VAL);
 void Timer2_COMP_MODE(char TIMER0_COMP_MODE);
 
+
+void init_Timer1(char TIMER_MODE, char TIMER_CLOCK_SOURCE);
+void Timer1_INT_ENABLE(char TIMER_INT);
+void Timer1_SET_COMP_VAL(char TIMER_COMP_VAL);
+void Timer1_COMP_MODE(char TIMER0_COMP_MODE);
+
 #endif	/* MTIMER_H */
 

@@ -32,7 +32,7 @@ void LEDs_OFF();
 // Specific LED
 void LED_ON(char LED);
 void LED_OFF(char LED);
-
+void LEDs_TOG();
 void LED_TOGGLE(char LED);
 
 #endif	/* MLEDS_H */
