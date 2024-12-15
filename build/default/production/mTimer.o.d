@@ -10,7 +10,7 @@ build/default/production/mTimer.o.d build/default/production/mTimer.o: \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\version.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\fuse.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\lock.h \
- mTimer.h
+ mTimer.h DIO_Interface.h
 
 c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\io.h:
 
@@ -35,3 +35,5 @@ c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\fuse.h:
 c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\lock.h:
 
 mTimer.h:
+
+DIO_Interface.h:
