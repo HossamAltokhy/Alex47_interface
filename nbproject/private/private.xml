@@ -9,16 +9,20 @@
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/DIO_Interface.c</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mLCD4.c</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/EXT_INT.h</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mLEDs.c</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mTimer.h</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mLCD4.h</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/DIO_Interface.h</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mLEDs.h</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mBuzzer.h</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mTimer.c</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mBuzzer.c</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mADC.h</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mUART.c</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mButtons.c</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mADC.c</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mButtons.h</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mUART.h</file>
         </group>
     </open-files>
 </project-private>

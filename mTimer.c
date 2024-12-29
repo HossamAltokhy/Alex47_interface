@@ -57,63 +57,63 @@ void Timer0_COMP_MODE(char TIMER0_COMP_MODE){
             break;
     }
 }
-
-void init_Timer1(char TIMER_MODE, char TIMER_CLOCK_SOURCE) {
-
-    // TCCR0
-    switch (TIMER_MODE) {
-        case TIMER0_MODE_NORMAL:
-            TCCR1 &= ~((1 << WGM01) | (1 << WGM00));
-            break;
-        case TIMER0_MODE_PWM:
-            TCCR1 &= ~((1 << WGM01) | (1 << WGM00));
-            TCCR1 |= (1 << WGM00);
-            break;
-        case TIMER0_MODE_CTC:
-            TCCR1 &= ~((1 << WGM01) | (1 << WGM00));
-            TCCR1 |= (1 << WGM01);
-            break;
-        case TIMER0_MODE_FPWM:
-            TCCR1 |= ((1 << WGM01) | (1 << WGM00));
-            break;
-    }
-
-    TCCR1 |= TIMER_CLOCK_SOURCE;
-
-
-}
-
-void Timer1_INT_ENABLE(char TIMER_INT) {
-    switch (TIMER_INT) {
-        case TIMER0_INT_TOV:
-            TIMSK |= (1 << TOIE1);
-            break;
-        case TIMER0_INT_OCF:
-            TIMSK |= (1 << OCIE1);
-            break;
-    }
-}
-
-void Timer0_SET_COMP_VAL(char TIMER_COMP_VAL) {
-    OCR1A = TIMER_COMP_VAL;
-    OCR1B = TIMER_COMP_VAL;
-    v
-}
-
-
-
-void Timer1_COMP_MODE(char TIMER0_COMP_MODE){
-    switch(TIMER0_COMP_MODE){
-        case TIMER0_COMP_MODE_CTC_TOGGLE:
-            DIO_Set_PIN_DIR(&PORTB, PB3, OUTPUT);
-            TCCR1 |= (1<<COM00);
-            break;
-        case TIMER0_COMP_MODE_PWM_SET_ON_COUNT_UP:
-            DIO_Set_PIN_DIR(&PORTB, PB3, OUTPUT);
-            TCCR1 |= (1<<COM01)|(1<<COM00);
-            break;
-    }
-}
+//
+//void init_Timer1(char TIMER_MODE, char TIMER_CLOCK_SOURCE) {
+//
+//    // TCCR0
+//    switch (TIMER_MODE) {
+//        case TIMER0_MODE_NORMAL:
+//            TCCR1 &= ~((1 << WGM01) | (1 << WGM00));
+//            break;
+//        case TIMER0_MODE_PWM:
+//            TCCR1 &= ~((1 << WGM01) | (1 << WGM00));
+//            TCCR1 |= (1 << WGM00);
+//            break;
+//        case TIMER0_MODE_CTC:
+//            TCCR1 &= ~((1 << WGM01) | (1 << WGM00));
+//            TCCR1 |= (1 << WGM01);
+//            break;
+//        case TIMER0_MODE_FPWM:
+//            TCCR1 |= ((1 << WGM01) | (1 << WGM00));
+//            break;
+//    }
+//
+//    TCCR1 |= TIMER_CLOCK_SOURCE;
+//
+//
+//}
+//
+//void Timer1_INT_ENABLE(char TIMER_INT) {
+//    switch (TIMER_INT) {
+//        case TIMER0_INT_TOV:
+//            TIMSK |= (1 << TOIE1);
+//            break;
+//        case TIMER0_INT_OCF:
+//            TIMSK |= (1 << OCIE1);
+//            break;
+//    }
+//}
+//
+//void Timer0_SET_COMP_VAL(char TIMER_COMP_VAL) {
+//    OCR1A = TIMER_COMP_VAL;
+//    OCR1B = TIMER_COMP_VAL;
+//    v
+//}
+//
+//
+//
+//void Timer1_COMP_MODE(char TIMER0_COMP_MODE){
+//    switch(TIMER0_COMP_MODE){
+//        case TIMER0_COMP_MODE_CTC_TOGGLE:
+//            DIO_Set_PIN_DIR(&PORTB, PB3, OUTPUT);
+//            TCCR1 |= (1<<COM00);
+//            break;
+//        case TIMER0_COMP_MODE_PWM_SET_ON_COUNT_UP:
+//            DIO_Set_PIN_DIR(&PORTB, PB3, OUTPUT);
+//            TCCR1 |= (1<<COM01)|(1<<COM00);
+//            break;
+//    }
+//}
 
 void init_Timer2(char TIMER_MODE, char TIMER_CLOCK_SOURCE) {
 

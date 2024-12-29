@@ -20,34 +20,64 @@
 #include "EXT_INT.h"
 #include "mADC.h"
 #include "mTimer.h"
+#include "mUART.h"
 
 
-ISR(TIMER0_OVF_vect){
-    LEDs_TOG();
+char str[] = "Hello World Alex47 \r";
+
+
+
+
+ISR(USART_RXC_vect){
+    
+    char data = UDR;
+    
+    LCD4_write(data);
+    switch(data){
+            case 'A':
+                LED_ON(LED0);
+                break;
+            case 'B':
+                LED_ON(LED1);
+                break;
+            case 'C':
+                LED_ON(LED2);
+                break;
+            case 'E':
+                LED_OFF(LED0);
+                break;
+            case 'F':
+                LED_OFF(LED1);
+                break;
+            case 'G':
+                LED_OFF(LED2);
+                break;
+        }
+    
 }
-
 
 int main(void) {
     /* Replace with your application code */
-    
-    TCNT0 = 250;
-    //OCR0 = 105;
-    init_Timer0(TIMER0_MODE_NORMAL, TIMER0_EXT_CS_RISING_EDGE);
-  
-    Timer0_INT_ENABLE(TIMER0_INT_TOV);
-    
-    
     init_LCD4();
+    init_UART(9600);
+    UART_INT_Enable(UART_INT_RXCIE);
+    
+    
+    
+    int x = 100;
+    
     init_LEDs();
     
-    LEDs_OFF();
     
     sei();
     while (1) {
 
-        LCD4_clear();
-        LCD4_num((TCNT1)>>8);
-        _delay_ms(300);
+        
+       
+        
+        
+        
+        
 
     }
 }

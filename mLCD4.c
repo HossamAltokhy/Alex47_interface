@@ -65,6 +65,15 @@ void LCD4_str(char * arr) {
     }
 }
 
+//void LCD4_str_new(char * arr, char skipChar) {
+//    for (int i = 0; arr[i] != '\0'; i++) {
+//        if(arr[i] == skipChar){
+//            continue;
+//        }
+//        LCD4_write(arr[i]);
+//    }
+//}
+
 void LCD4_num(int num){
     // Convert Num to a string
     char str[11];
