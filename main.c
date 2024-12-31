@@ -21,61 +21,31 @@
 #include "mADC.h"
 #include "mTimer.h"
 #include "mUART.h"
-
-
-char str[] = "Hello World Alex47 \r";
-
+#include "mSPI.h"
 
 
 
-ISR(USART_RXC_vect){
-    
-    char data = UDR;
-    
-    LCD4_write(data);
-    switch(data){
-            case 'A':
-                LED_ON(LED0);
-                break;
-            case 'B':
-                LED_ON(LED1);
-                break;
-            case 'C':
-                LED_ON(LED2);
-                break;
-            case 'E':
-                LED_OFF(LED0);
-                break;
-            case 'F':
-                LED_OFF(LED1);
-                break;
-            case 'G':
-                LED_OFF(LED2);
-                break;
-        }
-    
-}
+
+
 
 int main(void) {
     /* Replace with your application code */
+    
     init_LCD4();
-    init_UART(9600);
-    UART_INT_Enable(UART_INT_RXCIE);
-    
-    
-    
-    int x = 100;
-    
-    init_LEDs();
-    
-    
-    sei();
+    init_SPI(SPI_MODE_MASTER, DATA_ORDER_MSB, SPI_SPEED_PRE_128);
+    char data = 0;
+ 
+    _delay_ms(500);
     while (1) {
 
+        SPI_MASTER_WRITE('A');
+        _delay_ms(500);
         
-       
+        data = SPDR;
+        LCD4_clear();
+        LCD4_write(data);
         
-        
+        _delay_ms(500);
         
         
 
