@@ -22,32 +22,24 @@
 #include "mTimer.h"
 #include "mUART.h"
 #include "mSPI.h"
-
-
-
-
-
+#include "m24CL40.h"
 
 int main(void) {
     /* Replace with your application code */
-    
-    init_LCD4();
-    init_SPI(SPI_MODE_MASTER, DATA_ORDER_MSB, SPI_SPEED_PRE_128);
-    char data = 0;
- 
-    _delay_ms(500);
+
+    DDRA = 0xFF;
+    _delay_ms(20);
+    init_M24CL40();
     while (1) {
 
-        SPI_MASTER_WRITE('A');
+
+        M24CL40_WREN();
+        _delay_ms(20);
+
+        PORTA = M24CL40_READ_STAUTS_REG();
+
         _delay_ms(500);
-        
-        data = SPDR;
-        LCD4_clear();
-        LCD4_write(data);
-        
-        _delay_ms(500);
-        
-        
+
 
     }
 }

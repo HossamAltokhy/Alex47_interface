@@ -15,7 +15,7 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\util\delay_basic.h \
  c:\program\ files\microchip\xc8\v2.32\avr\avr\include\math.h \
  DIO_Interface.h mLEDs.h mButtons.h mBuzzer.h mRelay.h m7Segment.h \
- mLCD4.h EXT_INT.h mADC.h mTimer.h mUART.h mSPI.h
+ mLCD4.h EXT_INT.h mADC.h mTimer.h mUART.h mSPI.h m24CL40.h
 
 c:\program\ files\microchip\xc8\v2.32\avr\avr\include\avr\io.h:
 
@@ -70,3 +70,5 @@ mTimer.h:
 mUART.h:
 
 mSPI.h:
+
+m24CL40.h:
