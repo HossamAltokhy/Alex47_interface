@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c DIO_Interface.c mLEDs.c mButtons.c mRelay.c mBuzzer.c m7Segment.c mLCD8.c mLCD4.c EXT_INT.c mADC.c mTimer.c mUART.c mSPI.c m24CL40.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c DIO_Interface.c mLEDs.c mButtons.c mRelay.c mBuzzer.c m7Segment.c mLCD8.c mLCD4.c EXT_INT.c mADC.c mTimer.c mUART.c mSPI.c m24CL40.c mTWI.c M24C16_TWI.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/DIO_Interface.o ${OBJECTDIR}/mLEDs.o ${OBJECTDIR}/mButtons.o ${OBJECTDIR}/mRelay.o ${OBJECTDIR}/mBuzzer.o ${OBJECTDIR}/m7Segment.o ${OBJECTDIR}/mLCD8.o ${OBJECTDIR}/mLCD4.o ${OBJECTDIR}/EXT_INT.o ${OBJECTDIR}/mADC.o ${OBJECTDIR}/mTimer.o ${OBJECTDIR}/mUART.o ${OBJECTDIR}/mSPI.o ${OBJECTDIR}/m24CL40.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/DIO_Interface.o.d ${OBJECTDIR}/mLEDs.o.d ${OBJECTDIR}/mButtons.o.d ${OBJECTDIR}/mRelay.o.d ${OBJECTDIR}/mBuzzer.o.d ${OBJECTDIR}/m7Segment.o.d ${OBJECTDIR}/mLCD8.o.d ${OBJECTDIR}/mLCD4.o.d ${OBJECTDIR}/EXT_INT.o.d ${OBJECTDIR}/mADC.o.d ${OBJECTDIR}/mTimer.o.d ${OBJECTDIR}/mUART.o.d ${OBJECTDIR}/mSPI.o.d ${OBJECTDIR}/m24CL40.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/DIO_Interface.o ${OBJECTDIR}/mLEDs.o ${OBJECTDIR}/mButtons.o ${OBJECTDIR}/mRelay.o ${OBJECTDIR}/mBuzzer.o ${OBJECTDIR}/m7Segment.o ${OBJECTDIR}/mLCD8.o ${OBJECTDIR}/mLCD4.o ${OBJECTDIR}/EXT_INT.o ${OBJECTDIR}/mADC.o ${OBJECTDIR}/mTimer.o ${OBJECTDIR}/mUART.o ${OBJECTDIR}/mSPI.o ${OBJECTDIR}/m24CL40.o ${OBJECTDIR}/mTWI.o ${OBJECTDIR}/M24C16_TWI.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/DIO_Interface.o.d ${OBJECTDIR}/mLEDs.o.d ${OBJECTDIR}/mButtons.o.d ${OBJECTDIR}/mRelay.o.d ${OBJECTDIR}/mBuzzer.o.d ${OBJECTDIR}/m7Segment.o.d ${OBJECTDIR}/mLCD8.o.d ${OBJECTDIR}/mLCD4.o.d ${OBJECTDIR}/EXT_INT.o.d ${OBJECTDIR}/mADC.o.d ${OBJECTDIR}/mTimer.o.d ${OBJECTDIR}/mUART.o.d ${OBJECTDIR}/mSPI.o.d ${OBJECTDIR}/m24CL40.o.d ${OBJECTDIR}/mTWI.o.d ${OBJECTDIR}/M24C16_TWI.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/DIO_Interface.o ${OBJECTDIR}/mLEDs.o ${OBJECTDIR}/mButtons.o ${OBJECTDIR}/mRelay.o ${OBJECTDIR}/mBuzzer.o ${OBJECTDIR}/m7Segment.o ${OBJECTDIR}/mLCD8.o ${OBJECTDIR}/mLCD4.o ${OBJECTDIR}/EXT_INT.o ${OBJECTDIR}/mADC.o ${OBJECTDIR}/mTimer.o ${OBJECTDIR}/mUART.o ${OBJECTDIR}/mSPI.o ${OBJECTDIR}/m24CL40.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/DIO_Interface.o ${OBJECTDIR}/mLEDs.o ${OBJECTDIR}/mButtons.o ${OBJECTDIR}/mRelay.o ${OBJECTDIR}/mBuzzer.o ${OBJECTDIR}/m7Segment.o ${OBJECTDIR}/mLCD8.o ${OBJECTDIR}/mLCD4.o ${OBJECTDIR}/EXT_INT.o ${OBJECTDIR}/mADC.o ${OBJECTDIR}/mTimer.o ${OBJECTDIR}/mUART.o ${OBJECTDIR}/mSPI.o ${OBJECTDIR}/m24CL40.o ${OBJECTDIR}/mTWI.o ${OBJECTDIR}/M24C16_TWI.o
 
 # Source Files
-SOURCEFILES=main.c DIO_Interface.c mLEDs.c mButtons.c mRelay.c mBuzzer.c m7Segment.c mLCD8.c mLCD4.c EXT_INT.c mADC.c mTimer.c mUART.c mSPI.c m24CL40.c
+SOURCEFILES=main.c DIO_Interface.c mLEDs.c mButtons.c mRelay.c mBuzzer.c m7Segment.c mLCD8.c mLCD4.c EXT_INT.c mADC.c mTimer.c mUART.c mSPI.c m24CL40.c mTWI.c M24C16_TWI.c
 
 
 
@@ -184,6 +184,18 @@ ${OBJECTDIR}/m24CL40.o: m24CL40.c  .generated_files/flags/default/be3440acfc0109
 	@${RM} ${OBJECTDIR}/m24CL40.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/m24CL40.o.d" -MT "${OBJECTDIR}/m24CL40.o.d" -MT ${OBJECTDIR}/m24CL40.o -o ${OBJECTDIR}/m24CL40.o m24CL40.c 
 	
+${OBJECTDIR}/mTWI.o: mTWI.c  .generated_files/flags/default/19df3481b5623d489290e18bcc3a7b3c1260d0c7 .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/mTWI.o.d 
+	@${RM} ${OBJECTDIR}/mTWI.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mTWI.o.d" -MT "${OBJECTDIR}/mTWI.o.d" -MT ${OBJECTDIR}/mTWI.o -o ${OBJECTDIR}/mTWI.o mTWI.c 
+	
+${OBJECTDIR}/M24C16_TWI.o: M24C16_TWI.c  .generated_files/flags/default/c5b9d600f2bf8710c5059228936b7fa92b9544bb .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/M24C16_TWI.o.d 
+	@${RM} ${OBJECTDIR}/M24C16_TWI.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG  -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/M24C16_TWI.o.d" -MT "${OBJECTDIR}/M24C16_TWI.o.d" -MT ${OBJECTDIR}/M24C16_TWI.o -o ${OBJECTDIR}/M24C16_TWI.o M24C16_TWI.c 
+	
 else
 ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/f4c3057782fdd21250cbaa859cfefcd926f205b6 .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
 	@${MKDIR} "${OBJECTDIR}" 
@@ -274,6 +286,18 @@ ${OBJECTDIR}/m24CL40.o: m24CL40.c  .generated_files/flags/default/3bf15178e6c07f
 	@${RM} ${OBJECTDIR}/m24CL40.o.d 
 	@${RM} ${OBJECTDIR}/m24CL40.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/m24CL40.o.d" -MT "${OBJECTDIR}/m24CL40.o.d" -MT ${OBJECTDIR}/m24CL40.o -o ${OBJECTDIR}/m24CL40.o m24CL40.c 
+	
+${OBJECTDIR}/mTWI.o: mTWI.c  .generated_files/flags/default/ef341d000416e21f5957d7c5a011cafadcf89c01 .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/mTWI.o.d 
+	@${RM} ${OBJECTDIR}/mTWI.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/mTWI.o.d" -MT "${OBJECTDIR}/mTWI.o.d" -MT ${OBJECTDIR}/mTWI.o -o ${OBJECTDIR}/mTWI.o mTWI.c 
+	
+${OBJECTDIR}/M24C16_TWI.o: M24C16_TWI.c  .generated_files/flags/default/2ec5f4d6b52744e4024b8ceb08bb4b8503994d49 .generated_files/flags/default/2f9e58fd8ce1a2611b0e0fd33168db129b9285f3
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/M24C16_TWI.o.d 
+	@${RM} ${OBJECTDIR}/M24C16_TWI.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3     -MD -MP -MF "${OBJECTDIR}/M24C16_TWI.o.d" -MT "${OBJECTDIR}/M24C16_TWI.o.d" -MT ${OBJECTDIR}/M24C16_TWI.o -o ${OBJECTDIR}/M24C16_TWI.o M24C16_TWI.c 
 	
 endif
 

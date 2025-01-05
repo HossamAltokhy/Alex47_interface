@@ -23,22 +23,24 @@
 #include "mUART.h"
 #include "mSPI.h"
 #include "m24CL40.h"
+#include "mTWI.h"
+#include "M24C16_TWI.h"
 
 int main(void) {
     /* Replace with your application code */
 
-    DDRA = 0xFF;
-    _delay_ms(20);
-    init_M24CL40();
+    init_LCD4();
+    _delay_ms(50);
+    init_M24C16_TWI();
+    
+    _delay_ms(500);
     while (1) {
 
 
-        M24CL40_WREN();
-        _delay_ms(20);
-
-        PORTA = M24CL40_READ_STAUTS_REG();
-
-        _delay_ms(500);
+        M24C16_TWI_Write(0x70, 'A');
+        _delay_ms(1000);
+        
+        LCD4_write(M24C16_TWI_Read(0x70));
 
 
     }

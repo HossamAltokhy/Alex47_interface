@@ -18,6 +18,8 @@
       <itemPath>mUART.h</itemPath>
       <itemPath>mSPI.h</itemPath>
       <itemPath>m24CL40.h</itemPath>
+      <itemPath>mTWI.h</itemPath>
+      <itemPath>M24C16_TWI.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -41,6 +43,8 @@
       <itemPath>mUART.c</itemPath>
       <itemPath>mSPI.c</itemPath>
       <itemPath>m24CL40.c</itemPath>
+      <itemPath>mTWI.c</itemPath>
+      <itemPath>M24C16_TWI.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
