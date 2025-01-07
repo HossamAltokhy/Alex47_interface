@@ -13,7 +13,7 @@ void init_SPI(char SPI_MODE, char DATA_ORDER, char SPI_SPEED){
     switch(SPI_MODE){
         case SPI_MODE_MASTER:
             SPCR |= (1 << MSTR);
-            SPCR |= (1 << SPI_SPEED);
+            SPCR |= SPI_SPEED;
             
             DIO_Set_PIN_DIR(&PORTB, MOSI, OUTPUT);
             DIO_Set_PIN_DIR(&PORTB, SCK, OUTPUT);
@@ -26,7 +26,7 @@ void init_SPI(char SPI_MODE, char DATA_ORDER, char SPI_SPEED){
     }
     
     _delay_ms(50);
-    
+//    SPCR |= (1<<CPOL);
     // Enable SPI
     SPCR |= (1<<SPE);
     
@@ -36,7 +36,7 @@ void init_SPI(char SPI_MODE, char DATA_ORDER, char SPI_SPEED){
 void SPI_MASTER_WRITE(char data){
     SPDR = data;
     // wait till flag rises
-    while(!(SPSR & (1<<SPIF)));
+//    while(!(SPSR & (1<<SPIF)));
     
 }
 char SPI_MASTER_READ(){

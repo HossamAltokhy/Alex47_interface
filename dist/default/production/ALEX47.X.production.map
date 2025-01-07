@@ -292,51 +292,22 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/default/production/mSPI.o
  .data          0x0000000000000000        0x0 build/default/production/mSPI.o
  .bss           0x0000000000000000        0x0 build/default/production/mSPI.o
- .text.init_SPI
-                0x0000000000000000       0x76 build/default/production/mSPI.o
- .text.SPI_MASTER_WRITE
-                0x0000000000000000        0x8 build/default/production/mSPI.o
  .text.SPI_MASTER_READ
                 0x0000000000000000        0x8 build/default/production/mSPI.o
  .text.SPI_SLAVE_PREPARE
                 0x0000000000000000        0x4 build/default/production/mSPI.o
  .text.SPI_SLAVE_READ
                 0x0000000000000000        0x8 build/default/production/mSPI.o
- .debug_info    0x0000000000000000      0x469 build/default/production/mSPI.o
- .debug_abbrev  0x0000000000000000      0x11c build/default/production/mSPI.o
- .debug_loc     0x0000000000000000       0xdd build/default/production/mSPI.o
- .debug_aranges
-                0x0000000000000000       0x40 build/default/production/mSPI.o
- .debug_ranges  0x0000000000000000       0x30 build/default/production/mSPI.o
- .debug_line    0x0000000000000000      0x1a1 build/default/production/mSPI.o
- .debug_str     0x0000000000000000       0x10 build/default/production/mSPI.o
- .comment       0x0000000000000000       0x30 build/default/production/mSPI.o
- .debug_frame   0x0000000000000000       0x64 build/default/production/mSPI.o
  .text          0x0000000000000000        0x0 build/default/production/m24CL40.o
  .data          0x0000000000000000        0x0 build/default/production/m24CL40.o
  .bss           0x0000000000000000        0x0 build/default/production/m24CL40.o
- .text.init_M24CL40
-                0x0000000000000000        0xc build/default/production/m24CL40.o
- .text.M24CL40_CS_Enable
-                0x0000000000000000        0xe build/default/production/m24CL40.o
- .text.M24CL40_CS_Disable
-                0x0000000000000000        0xe build/default/production/m24CL40.o
- .text.M24CL40_WREN
-                0x0000000000000000       0x10 build/default/production/m24CL40.o
  .text.M24CL40_READ_STAUTS_REG
-                0x0000000000000000       0x18 build/default/production/m24CL40.o
- .debug_info    0x0000000000000000      0x3b3 build/default/production/m24CL40.o
- .debug_abbrev  0x0000000000000000       0xa1 build/default/production/m24CL40.o
- .debug_aranges
-                0x0000000000000000       0x40 build/default/production/m24CL40.o
- .debug_ranges  0x0000000000000000       0x30 build/default/production/m24CL40.o
- .debug_line    0x0000000000000000      0x11d build/default/production/m24CL40.o
- .debug_str     0x0000000000000000       0x2c build/default/production/m24CL40.o
- .comment       0x0000000000000000       0x30 build/default/production/m24CL40.o
- .debug_frame   0x0000000000000000       0x64 build/default/production/m24CL40.o
+                0x0000000000000000       0x26 build/default/production/m24CL40.o
  .text          0x0000000000000000        0x0 build/default/production/mTWI.o
  .data          0x0000000000000000        0x0 build/default/production/mTWI.o
  .bss           0x0000000000000000        0x0 build/default/production/mTWI.o
+ .text.init_TWI
+                0x0000000000000000        0x8 build/default/production/mTWI.o
  .text.TWI_Master_Transmit
                 0x0000000000000000       0x52 build/default/production/mTWI.o
  .text.TWI_Master_Receive
@@ -345,9 +316,35 @@ Discarded input sections
                 0x0000000000000000       0x22 build/default/production/mTWI.o
  .text.TWI_Slave_Receive
                 0x0000000000000000       0x2e build/default/production/mTWI.o
+ .debug_info    0x0000000000000000      0x31d build/default/production/mTWI.o
+ .debug_abbrev  0x0000000000000000       0xa7 build/default/production/mTWI.o
+ .debug_loc     0x0000000000000000       0x9c build/default/production/mTWI.o
+ .debug_aranges
+                0x0000000000000000       0x40 build/default/production/mTWI.o
+ .debug_ranges  0x0000000000000000       0x30 build/default/production/mTWI.o
+ .debug_line    0x0000000000000000      0x215 build/default/production/mTWI.o
+ .debug_str     0x0000000000000000        0x0 build/default/production/mTWI.o
+ .comment       0x0000000000000000       0x30 build/default/production/mTWI.o
+ .debug_frame   0x0000000000000000       0x64 build/default/production/mTWI.o
  .text          0x0000000000000000        0x0 build/default/production/M24C16_TWI.o
  .data          0x0000000000000000        0x0 build/default/production/M24C16_TWI.o
  .bss           0x0000000000000000        0x0 build/default/production/M24C16_TWI.o
+ .text.init_M24C16_TWI
+                0x0000000000000000        0x8 build/default/production/M24C16_TWI.o
+ .text.M24C16_TWI_Write
+                0x0000000000000000       0x6e build/default/production/M24C16_TWI.o
+ .text.M24C16_TWI_Read
+                0x0000000000000000       0xa6 build/default/production/M24C16_TWI.o
+ .debug_info    0x0000000000000000      0x2ef build/default/production/M24C16_TWI.o
+ .debug_abbrev  0x0000000000000000       0xd2 build/default/production/M24C16_TWI.o
+ .debug_loc     0x0000000000000000       0xb7 build/default/production/M24C16_TWI.o
+ .debug_aranges
+                0x0000000000000000       0x30 build/default/production/M24C16_TWI.o
+ .debug_ranges  0x0000000000000000       0x20 build/default/production/M24C16_TWI.o
+ .debug_line    0x0000000000000000      0x215 build/default/production/M24C16_TWI.o
+ .debug_str     0x0000000000000000        0x9 build/default/production/M24C16_TWI.o
+ .comment       0x0000000000000000       0x30 build/default/production/M24C16_TWI.o
+ .debug_frame   0x0000000000000000       0x44 build/default/production/M24C16_TWI.o
  .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a(fixsfsi.o)
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a(fixsfsi.o)
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v2.32/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libm.a(fixsfsi.o)
@@ -786,8 +783,8 @@ END GROUP
                                          0x30 (size before relaxing)
  .comment       0x000000000000002f       0x30 build/default/production/DIO_Interface.o
  .comment       0x000000000000002f       0x30 build/default/production/mLCD4.o
- .comment       0x000000000000002f       0x30 build/default/production/mTWI.o
- .comment       0x000000000000002f       0x30 build/default/production/M24C16_TWI.o
+ .comment       0x000000000000002f       0x30 build/default/production/mSPI.o
+ .comment       0x000000000000002f       0x30 build/default/production/m24CL40.o
 
 .stack.descriptors.hdr
                 0x0000000000000000        0xe
@@ -809,7 +806,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x130
+.debug_aranges  0x0000000000000000      0x150
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0x20 build/default/production/main.o
@@ -818,64 +815,64 @@ END GROUP
  .debug_aranges
                 0x0000000000000070       0x50 build/default/production/mLCD4.o
  .debug_aranges
-                0x00000000000000c0       0x40 build/default/production/mTWI.o
+                0x00000000000000c0       0x40 build/default/production/mSPI.o
  .debug_aranges
-                0x0000000000000100       0x30 build/default/production/M24C16_TWI.o
+                0x0000000000000100       0x50 build/default/production/m24CL40.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x1a80
+.debug_info     0x0000000000000000     0x1f9a
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x4e6 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
- .debug_info    0x00000000000004e6      0x3cf build/default/production/main.o
- .debug_info    0x00000000000008b5      0x426 build/default/production/DIO_Interface.o
- .debug_info    0x0000000000000cdb      0x799 build/default/production/mLCD4.o
- .debug_info    0x0000000000001474      0x31d build/default/production/mTWI.o
- .debug_info    0x0000000000001791      0x2ef build/default/production/M24C16_TWI.o
+ .debug_info    0x00000000000004e6      0x4a8 build/default/production/main.o
+ .debug_info    0x000000000000098e      0x426 build/default/production/DIO_Interface.o
+ .debug_info    0x0000000000000db4      0x799 build/default/production/mLCD4.o
+ .debug_info    0x000000000000154d      0x469 build/default/production/mSPI.o
+ .debug_info    0x00000000000019b6      0x5e4 build/default/production/m24CL40.o
 
-.debug_abbrev   0x0000000000000000      0x9b7
+.debug_abbrev   0x0000000000000000      0xab7
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x4a3 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
  .debug_abbrev  0x00000000000004a3      0x106 build/default/production/main.o
  .debug_abbrev  0x00000000000005a9       0x9f build/default/production/DIO_Interface.o
  .debug_abbrev  0x0000000000000648      0x1f6 build/default/production/mLCD4.o
- .debug_abbrev  0x000000000000083e       0xa7 build/default/production/mTWI.o
- .debug_abbrev  0x00000000000008e5       0xd2 build/default/production/M24C16_TWI.o
+ .debug_abbrev  0x000000000000083e      0x11c build/default/production/mSPI.o
+ .debug_abbrev  0x000000000000095a      0x15d build/default/production/m24CL40.o
 
-.debug_line     0x0000000000000000      0x97b
+.debug_line     0x0000000000000000      0x941
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x119 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
- .debug_line    0x0000000000000119      0x11d build/default/production/main.o
- .debug_line    0x0000000000000236       0xfa build/default/production/DIO_Interface.o
- .debug_line    0x0000000000000330      0x221 build/default/production/mLCD4.o
- .debug_line    0x0000000000000551      0x215 build/default/production/mTWI.o
- .debug_line    0x0000000000000766      0x215 build/default/production/M24C16_TWI.o
+ .debug_line    0x0000000000000119      0x137 build/default/production/main.o
+ .debug_line    0x0000000000000250       0xfa build/default/production/DIO_Interface.o
+ .debug_line    0x000000000000034a      0x221 build/default/production/mLCD4.o
+ .debug_line    0x000000000000056b      0x191 build/default/production/mSPI.o
+ .debug_line    0x00000000000006fc      0x245 build/default/production/m24CL40.o
 
-.debug_frame    0x0000000000000000      0x200
+.debug_frame    0x0000000000000000      0x25c
  *(.debug_frame)
  .debug_frame   0x0000000000000000       0x24 build/default/production/main.o
  .debug_frame   0x0000000000000024       0x84 build/default/production/DIO_Interface.o
  .debug_frame   0x00000000000000a8       0xb0 build/default/production/mLCD4.o
- .debug_frame   0x0000000000000158       0x64 build/default/production/mTWI.o
- .debug_frame   0x00000000000001bc       0x44 build/default/production/M24C16_TWI.o
+ .debug_frame   0x0000000000000158       0x64 build/default/production/mSPI.o
+ .debug_frame   0x00000000000001bc       0xa0 build/default/production/m24CL40.o
 
-.debug_str      0x0000000000000000      0x252
+.debug_str      0x0000000000000000      0x29c
  *(.debug_str)
  .debug_str     0x0000000000000000      0x196 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
- .debug_str     0x0000000000000196       0x46 build/default/production/main.o
- .debug_str     0x00000000000001dc        0x6 build/default/production/DIO_Interface.o
- .debug_str     0x00000000000001e2       0x67 build/default/production/mLCD4.o
- .debug_str     0x0000000000000249        0x0 build/default/production/mTWI.o
- .debug_str     0x0000000000000249        0x9 build/default/production/M24C16_TWI.o
+ .debug_str     0x0000000000000196       0x5d build/default/production/main.o
+ .debug_str     0x00000000000001f3        0x6 build/default/production/DIO_Interface.o
+ .debug_str     0x00000000000001f9       0x67 build/default/production/mLCD4.o
+ .debug_str     0x0000000000000260       0x10 build/default/production/mSPI.o
+ .debug_str     0x0000000000000270       0x2c build/default/production/m24CL40.o
 
-.debug_loc      0x0000000000000000      0x583
+.debug_loc      0x0000000000000000      0x705
  *(.debug_loc)
- .debug_loc     0x0000000000000000       0x90 build/default/production/main.o
- .debug_loc     0x0000000000000090      0x136 build/default/production/DIO_Interface.o
- .debug_loc     0x00000000000001c6      0x26a build/default/production/mLCD4.o
- .debug_loc     0x0000000000000430       0x9c build/default/production/mTWI.o
- .debug_loc     0x00000000000004cc       0xb7 build/default/production/M24C16_TWI.o
+ .debug_loc     0x0000000000000000      0x120 build/default/production/main.o
+ .debug_loc     0x0000000000000120      0x136 build/default/production/DIO_Interface.o
+ .debug_loc     0x0000000000000256      0x26a build/default/production/mLCD4.o
+ .debug_loc     0x00000000000004c0       0xdd build/default/production/mSPI.o
+ .debug_loc     0x000000000000059d      0x168 build/default/production/m24CL40.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -895,13 +892,13 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000       0xe0
+.debug_ranges   0x0000000000000000      0x100
  *(.debug_ranges)
  .debug_ranges  0x0000000000000000       0x10 build/default/production/main.o
  .debug_ranges  0x0000000000000010       0x40 build/default/production/DIO_Interface.o
  .debug_ranges  0x0000000000000050       0x40 build/default/production/mLCD4.o
- .debug_ranges  0x0000000000000090       0x30 build/default/production/mTWI.o
- .debug_ranges  0x00000000000000c0       0x20 build/default/production/M24C16_TWI.o
+ .debug_ranges  0x0000000000000090       0x30 build/default/production/mSPI.o
+ .debug_ranges  0x00000000000000c0       0x40 build/default/production/m24CL40.o
 
 .debug_macro
  *(.debug_macro)
@@ -914,94 +911,118 @@ LOAD data_init
  .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x3c C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
 
-.text.M24C16_TWI_Read
-                0x000000000000006c       0xa6
- .text.M24C16_TWI_Read
-                0x000000000000006c       0xa6 build/default/production/M24C16_TWI.o
-                0x000000000000006c                M24C16_TWI_Read
+.text.main      0x000000000000006c       0x90
+ .text.main     0x000000000000006c       0x90 build/default/production/main.o
+                0x000000000000006c                main
 
-.text.M24C16_TWI_Write
-                0x0000000000000112       0x6e
- .text.M24C16_TWI_Write
-                0x0000000000000112       0x6e build/default/production/M24C16_TWI.o
-                0x0000000000000112                M24C16_TWI_Write
+.text.init_SPI  0x00000000000000fc       0x68
+ .text.init_SPI
+                0x00000000000000fc       0x68 build/default/production/mSPI.o
+                0x00000000000000fc                init_SPI
 
 .text.init_LCD4
-                0x0000000000000180       0x5a
+                0x0000000000000164       0x5a
  .text.init_LCD4
-                0x0000000000000180       0x5a build/default/production/mLCD4.o
-                0x0000000000000180                init_LCD4
-
-.text.main      0x00000000000001da       0x52
- .text.main     0x00000000000001da       0x52 build/default/production/main.o
-                0x00000000000001da                main
+                0x0000000000000164       0x5a build/default/production/mLCD4.o
+                0x0000000000000164                init_LCD4
 
 .text.DIO_Set_PIN_DIR
-                0x000000000000022c       0x40
+                0x00000000000001be       0x40
  .text.DIO_Set_PIN_DIR
-                0x000000000000022c       0x40 build/default/production/DIO_Interface.o
-                0x000000000000022c                DIO_Set_PIN_DIR
+                0x00000000000001be       0x40 build/default/production/DIO_Interface.o
+                0x00000000000001be                DIO_Set_PIN_DIR
 
 .text.DIO_Set_PIN_VALUE
-                0x000000000000026c       0x3a
+                0x00000000000001fe       0x3a
  .text.DIO_Set_PIN_VALUE
-                0x000000000000026c       0x3a build/default/production/DIO_Interface.o
-                0x000000000000026c                DIO_Set_PIN_VALUE
+                0x00000000000001fe       0x3a build/default/production/DIO_Interface.o
+                0x00000000000001fe                DIO_Set_PIN_VALUE
 
 .text.LCD4_write
-                0x00000000000002a6       0x3a
+                0x0000000000000238       0x3a
  .text.LCD4_write
-                0x00000000000002a6       0x3a build/default/production/mLCD4.o
-                0x00000000000002a6                LCD4_write
+                0x0000000000000238       0x3a build/default/production/mLCD4.o
+                0x0000000000000238                LCD4_write
 
-.text.LCD4_cmd  0x00000000000002e0       0x3a
+.text.LCD4_cmd  0x0000000000000272       0x3a
  .text.LCD4_cmd
-                0x00000000000002e0       0x3a build/default/production/mLCD4.o
-                0x00000000000002e0                LCD4_cmd
+                0x0000000000000272       0x3a build/default/production/mLCD4.o
+                0x0000000000000272                LCD4_cmd
+
+.text.init_M24CL40
+                0x00000000000002ac       0x34
+ .text.init_M24CL40
+                0x00000000000002ac       0x34 build/default/production/m24CL40.o
+                0x00000000000002ac                init_M24CL40
+
+.text.M24CL40_write
+                0x00000000000002e0       0x34
+ .text.M24CL40_write
+                0x00000000000002e0       0x34 build/default/production/m24CL40.o
+                0x00000000000002e0                M24CL40_write
+
+.text.M24CL40_read
+                0x0000000000000314       0x32
+ .text.M24CL40_read
+                0x0000000000000314       0x32 build/default/production/m24CL40.o
+                0x0000000000000314                M24CL40_read
 
 .text.LCD4_Enable
-                0x000000000000031a       0x26
+                0x0000000000000346       0x26
  .text.LCD4_Enable
-                0x000000000000031a       0x26 build/default/production/mLCD4.o
-                0x000000000000031a                LCD4_Enable
+                0x0000000000000346       0x26 build/default/production/mLCD4.o
+                0x0000000000000346                LCD4_Enable
+
+.text.M24CL40_WREN
+                0x000000000000036c       0x14
+ .text.M24CL40_WREN
+                0x000000000000036c       0x14 build/default/production/m24CL40.o
+                0x000000000000036c                M24CL40_WREN
+
+.text.M24CL40_CS_Enable
+                0x0000000000000380        0xe
+ .text.M24CL40_CS_Enable
+                0x0000000000000380        0xe build/default/production/m24CL40.o
+                0x0000000000000380                M24CL40_CS_Enable
+
+.text.M24CL40_CS_Disable
+                0x000000000000038e        0xe
+ .text.M24CL40_CS_Disable
+                0x000000000000038e        0xe build/default/production/m24CL40.o
+                0x000000000000038e                M24CL40_CS_Disable
 
 .text.DIO_Set_PORT_DIR
-                0x0000000000000340        0x8
+                0x000000000000039c        0x8
  .text.DIO_Set_PORT_DIR
-                0x0000000000000340        0x8 build/default/production/DIO_Interface.o
-                0x0000000000000340                DIO_Set_PORT_DIR
+                0x000000000000039c        0x8 build/default/production/DIO_Interface.o
+                0x000000000000039c                DIO_Set_PORT_DIR
 
-.text.init_TWI  0x0000000000000348        0x8
- .text.init_TWI
-                0x0000000000000348        0x8 build/default/production/mTWI.o
-                0x0000000000000348                init_TWI
+.text           0x00000000000003a4        0x4
+ .text          0x00000000000003a4        0x4 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
+                0x00000000000003a4                __vector_1
+                0x00000000000003a4                __vector_12
+                0x00000000000003a4                __bad_interrupt
+                0x00000000000003a4                __vector_6
+                0x00000000000003a4                __vector_3
+                0x00000000000003a4                __vector_11
+                0x00000000000003a4                __vector_13
+                0x00000000000003a4                __vector_17
+                0x00000000000003a4                __vector_19
+                0x00000000000003a4                __vector_7
+                0x00000000000003a4                __vector_5
+                0x00000000000003a4                __vector_4
+                0x00000000000003a4                __vector_9
+                0x00000000000003a4                __vector_2
+                0x00000000000003a4                __vector_15
+                0x00000000000003a4                __vector_8
+                0x00000000000003a4                __vector_14
+                0x00000000000003a4                __vector_10
+                0x00000000000003a4                __vector_16
+                0x00000000000003a4                __vector_18
+                0x00000000000003a4                __vector_20
 
-.text.init_M24C16_TWI
-                0x0000000000000350        0x8
- .text.init_M24C16_TWI
-                0x0000000000000350        0x8 build/default/production/M24C16_TWI.o
-                0x0000000000000350                init_M24C16_TWI
-
-.text           0x0000000000000358        0x4
- .text          0x0000000000000358        0x4 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/ATmega_DFP/2.3.126/xc8/avr/lib/avr5/memx-const/crtatmega32a.o
-                0x0000000000000358                __vector_1
-                0x0000000000000358                __vector_12
-                0x0000000000000358                __bad_interrupt
-                0x0000000000000358                __vector_6
-                0x0000000000000358                __vector_3
-                0x0000000000000358                __vector_11
-                0x0000000000000358                __vector_13
-                0x0000000000000358                __vector_17
-                0x0000000000000358                __vector_19
-                0x0000000000000358                __vector_7
-                0x0000000000000358                __vector_5
-                0x0000000000000358                __vector_4
-                0x0000000000000358                __vector_9
-                0x0000000000000358                __vector_2
-                0x0000000000000358                __vector_15
-                0x0000000000000358                __vector_8
-                0x0000000000000358                __vector_14
-                0x0000000000000358                __vector_10
-                0x0000000000000358                __vector_16
-                0x0000000000000358                __vector_18
-                0x0000000000000358                __vector_20
+.text.SPI_MASTER_WRITE
+                0x00000000000003a8        0x4
+ .text.SPI_MASTER_WRITE
+                0x00000000000003a8        0x4 build/default/production/mSPI.o
+                0x00000000000003a8                SPI_MASTER_WRITE

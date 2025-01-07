@@ -30,17 +30,37 @@ int main(void) {
     /* Replace with your application code */
 
     init_LCD4();
-    _delay_ms(50);
-    init_M24C16_TWI();
-    
     _delay_ms(500);
+
+
+    init_M24CL40();
+
+    M24CL40_CS_Disable();
+    _delay_ms(500);
+
+    M24CL40_WREN();
+    _delay_ms(500);
+
+
+    _delay_ms(100);
+
+
+    M24CL40_write(50, 'A');
+    _delay_ms(500);
+
+
     while (1) {
 
-
-        M24C16_TWI_Write(0x70, 'A');
-        _delay_ms(1000);
         
-        LCD4_write(M24C16_TWI_Read(0x70));
+        LCD4_write(M24CL40_read(50));
+        _delay_ms(500);
+
+        
+
+
+
+
+
 
 
     }

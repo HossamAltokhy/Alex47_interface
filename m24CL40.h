@@ -13,6 +13,8 @@
 #define M24CL40_CODE_WRDI   0x04
 #define M24CL40_CODE_RDSR   0x05
 #define M24CL40_CODE_WRSR   0x01
+#define M24CL40_CODE_WRITE  0x02
+#define M24CL40_CODE_READ   0x03
 
 void init_M24CL40();
 void M24CL40_write(char address, char data);
