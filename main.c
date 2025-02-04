@@ -28,53 +28,21 @@
 #include "EEPROM.h"
 
 
+// FreeRTOS inclusions..
+#include "freertos/include/FreeRTOS.h"
+#include "freertos/include/FreeRTOSConfig.h"
+#include "freertos/include/task.h"
+
+
+
 
 
 
 int main(void) {
     /* Replace with your application code */
 
-    init_LEDs();
-    init_BTNS();
-    
-    LEDs_OFF();
-    
-//    EEPROM_write(0x09, 2);
-    _delay_ms(500);
-    int index = EEPROM_read(0x09);
-
 
     while (1) {
-
-        if(BTNs_isPressed(BTN0)){
-            _delay_ms(500);
-            index++;
-            EEPROM_write(0x09, index);
-        }
-        
-        switch(index){
-            case 0:
-                LED_ON(LED0);
-                LED_OFF(LED1);
-                LED_OFF(LED2);
-                break;
-            case 1:
-                LED_ON(LED1);
-                LED_OFF(LED0);
-                LED_OFF(LED2);
-                break;
-            case 2:
-                LED_ON(LED2);
-                LED_OFF(LED1);
-                LED_OFF(LED0);
-                break;
-        }
-        
-
-
-
-
-
 
 
     }
