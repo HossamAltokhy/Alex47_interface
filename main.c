@@ -34,16 +34,37 @@
 #include "freertos/include/task.h"
 
 
-
-
-
+// Task Function
+void task1(void * pVar) {
+    while (1) {
+//        LCD4_clear();
+        LED_TOGGLE(LED0);
+        vTaskDelay(1000);
+    }
+}
+// Task Function
+void task2(void* pVar) {
+    
+    vTaskDelay(100);
+    while (1) {
+//        LCD4_clear();
+        LCD4_write('B');
+        vTaskDelay(50);
+    }
+}
 
 int main(void) {
     /* Replace with your application code */
-
-
+    
+    init_LCD4();
+    init_LEDs();
+  
+    xTaskCreate(task1, "T1", 100, NULL, 3, NULL );
+    xTaskCreate(task2, "T2", 100, NULL, 3, NULL );
+    
+    vTaskStartScheduler();
+    
     while (1) {
-
 
     }
 }
