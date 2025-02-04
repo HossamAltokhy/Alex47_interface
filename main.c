@@ -25,36 +25,50 @@
 #include "m24CL40.h"
 #include "mTWI.h"
 #include "M24C16_TWI.h"
+#include "EEPROM.h"
+
+
+
+
 
 int main(void) {
     /* Replace with your application code */
 
-    init_LCD4();
+    init_LEDs();
+    init_BTNS();
+    
+    LEDs_OFF();
+    
+//    EEPROM_write(0x09, 2);
     _delay_ms(500);
-
-
-    init_M24CL40();
-
-    M24CL40_CS_Disable();
-    _delay_ms(500);
-
-    M24CL40_WREN();
-    _delay_ms(500);
-
-
-    _delay_ms(100);
-
-
-    M24CL40_write(50, 'A');
-    _delay_ms(500);
+    int index = EEPROM_read(0x09);
 
 
     while (1) {
 
+        if(BTNs_isPressed(BTN0)){
+            _delay_ms(500);
+            index++;
+            EEPROM_write(0x09, index);
+        }
         
-        LCD4_write(M24CL40_read(50));
-        _delay_ms(500);
-
+        switch(index){
+            case 0:
+                LED_ON(LED0);
+                LED_OFF(LED1);
+                LED_OFF(LED2);
+                break;
+            case 1:
+                LED_ON(LED1);
+                LED_OFF(LED0);
+                LED_OFF(LED2);
+                break;
+            case 2:
+                LED_ON(LED2);
+                LED_OFF(LED1);
+                LED_OFF(LED0);
+                break;
+        }
         
 
 

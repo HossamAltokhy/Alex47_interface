@@ -15,7 +15,7 @@
 #define SLA_R     0x71
 
 void init_TWI(char Device_Address);
-void TWI_Master_Transmit(char data);
+char TWI_Master_Transmit(char data);
 char TWI_Master_Receive();
 void TWI_Slave_Transmit(char data);
 char TWI_Slave_Receive();

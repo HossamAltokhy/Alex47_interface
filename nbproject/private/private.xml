@@ -3,30 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/m7Segment.c</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mSPI.c</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/main.c</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/EXT_INT.c</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mBuzzer.c</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/m7Segment.c</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/DIO_Interface.c</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mBuzzer.h</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mLCD4.c</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/EXT_INT.h</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mLEDs.c</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mTimer.h</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mLCD4.h</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mSPI.h</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/DIO_Interface.h</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mLEDs.h</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mBuzzer.h</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mTimer.c</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mBuzzer.c</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/EXT_INT.c</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mADC.h</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mUART.c</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mButtons.c</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mSPI.h</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mSPI.c</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/m24CL40.h</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mADC.c</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mButtons.h</file>
             <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/m24CL40.c</file>
-            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mUART.h</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mTWI.c</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/mTWI.h</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/M24C16_TWI.c</file>
+            <file>file:/C:/Users/hossa/MPLABXProjects/ALEX47.X/M24C16_TWI.h</file>
         </group>
     </open-files>
 </project-private>

@@ -9,7 +9,7 @@ void init_M24C16_TWI() {
     init_TWI(DEV_ADDRESS);
 }
 
-void M24C16_TWI_Write(char address, char data) {
+char M24C16_TWI_Write(char address, char data) {
     // Start Condition
     TWCR = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN);
 
@@ -48,6 +48,9 @@ void M24C16_TWI_Write(char address, char data) {
 
     // Stop Condition
     TWCR = (1 << TWINT) | (1 << TWSTO) | (1 << TWEN);
+    
+    
+    return 0;
 
 }
 

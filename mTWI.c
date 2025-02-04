@@ -10,7 +10,7 @@ void init_TWI(char Device_Address) {
 
 }
 
-void TWI_Master_Transmit(char data) {
+char TWI_Master_Transmit(char data) {
     // Start Condition
     TWCR = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN);
 
@@ -39,6 +39,8 @@ void TWI_Master_Transmit(char data) {
 
     // Stop Condition
     TWCR = (1 << TWINT) | (1 << TWSTO) | (1 << TWEN);
+    
+    return 0;
 
 }
 char TWI_Master_Receive(){
@@ -99,5 +101,7 @@ char TWI_Slave_Receive() {
         return -1;
     }
 
+    
+    return 0;
 
 }
