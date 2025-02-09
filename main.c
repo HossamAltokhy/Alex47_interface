@@ -32,56 +32,81 @@
 #include "freertos/include/FreeRTOS.h"
 #include "freertos/include/FreeRTOSConfig.h"
 #include "freertos/include/task.h"
+#include "freertos/include/queue.h"
+
 
 
 
 TaskHandle_t Task1_Handler = NULL;
 TaskHandle_t Task2_Handler = NULL;
 
-char str1[] = "Task 1 is running \r";
-char str2[] = "Task 2 is running \r";
+xQueueHandle Queue_Handler = NULL;
+
+
+//char str1[] = "Task 1 is running \r";
+//char str2[] = "Task 2 is running \r";
 
 // Task Function
+
 void task1(void * pVar) {
-    
-    
-    char* str = (char *)pVar;
+
+
+    int x = 0;
+    portBASE_TYPE result;
+    //    char* str = (char *)pVar;
     while (1) {
-        UART_send_str(str);
-        vTaskDelay(5);
+
+        x++;
+        result = xQueueSendToBack(Queue_Handler, (void *) &x, 5);
+        if (result == errQUEUE_FULL) {
+            x--;
+        }
+        vTaskDelay(500);
     }
-    
+
     vTaskDelete(NULL);
 }
 
 // Task Function
-//void task2(void* pVar) {
-//    
-//    vTaskDelay(100);
-//    while (1) {
-//        UART_send_str(str2);
-//        vTaskDelay(5);
-//    }
-//    
-//    vTaskDelete(NULL);
-//}
 
+void task2(void* pVar) {
+
+    int x = 0;
+    portBASE_TYPE result;
+    vTaskDelay(100);
+    while (1) {
+
+        result = xQueueReceive(Queue_Handler, &x, 5);
+
+        if (result == pdPASS) {
+            LCD4_clear();
+            LCD4_num(x);
+        }
+
+        vTaskDelay(500);
+
+    }
+
+    vTaskDelete(NULL);
+}
 
 int main(void) {
     /* Replace with your application code */
-    
+
     init_LCD4();
-    init_LEDs();
-    init_UART(9600);
-  
-    xTaskCreate(task1, "T1", 100, (void*)str1, 3, &Task1_Handler);
-    xTaskCreate(task1, "T2", 100, (void*)str2, 3, &Task2_Handler);
-    
+    //    init_LEDs();
+    //    init_UART(9600);
+
+    Queue_Handler = xQueueCreate(4, sizeof (int));
+
+    xTaskCreate(task1, "T1", 100, (void*) NULL, 3, &Task1_Handler);
+    xTaskCreate(task2, "T2", 100, (void*) NULL, 3, &Task2_Handler);
+
     vTaskStartScheduler();
-    
+
     while (1) {
-        
-//        UART_send('A');
-//        _delay_ms(500);
+
+        //        UART_send('A');
+        //        _delay_ms(500);
     }
 }

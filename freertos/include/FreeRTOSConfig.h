@@ -54,6 +54,7 @@
 #define configUSE_16_BIT_TICKS		1
 #define configIDLE_SHOULD_YIELD		1
 #define configQUEUE_REGISTRY_SIZE	0
+#define configUSE_TIME_SLICING      1
 
 /* Set the following definitions to 1 to include the API function, or zero
 to exclude the API function. */
