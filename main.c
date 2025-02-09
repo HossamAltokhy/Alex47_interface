@@ -34,37 +34,54 @@
 #include "freertos/include/task.h"
 
 
+
+TaskHandle_t Task1_Handler = NULL;
+TaskHandle_t Task2_Handler = NULL;
+
+char str1[] = "Task 1 is running \r";
+char str2[] = "Task 2 is running \r";
+
 // Task Function
 void task1(void * pVar) {
-    while (1) {
-//        LCD4_clear();
-        LED_TOGGLE(LED0);
-        vTaskDelay(1000);
-    }
-}
-// Task Function
-void task2(void* pVar) {
     
-    vTaskDelay(100);
+    
+    char* str = (char *)pVar;
     while (1) {
-//        LCD4_clear();
-        LCD4_write('B');
-        vTaskDelay(50);
+        UART_send_str(str);
+        vTaskDelay(5);
     }
+    
+    vTaskDelete(NULL);
 }
+
+// Task Function
+//void task2(void* pVar) {
+//    
+//    vTaskDelay(100);
+//    while (1) {
+//        UART_send_str(str2);
+//        vTaskDelay(5);
+//    }
+//    
+//    vTaskDelete(NULL);
+//}
+
 
 int main(void) {
     /* Replace with your application code */
     
     init_LCD4();
     init_LEDs();
+    init_UART(9600);
   
-    xTaskCreate(task1, "T1", 100, NULL, 3, NULL );
-    xTaskCreate(task2, "T2", 100, NULL, 3, NULL );
+    xTaskCreate(task1, "T1", 100, (void*)str1, 3, &Task1_Handler);
+    xTaskCreate(task1, "T2", 100, (void*)str2, 3, &Task2_Handler);
     
     vTaskStartScheduler();
     
     while (1) {
-
+        
+//        UART_send('A');
+//        _delay_ms(500);
     }
 }
